@@ -5,15 +5,17 @@
 
   &:after {
     content: '';
-    height: 800px;
-    width: 800px;
-    background: $color-3;
+    height: 808px;
+    width: 808px;
+    background: linear-gradient(45deg ,#e6fb04, #ff6600, #00ff66, #00ffff,
+    #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff );
+    filter: blur(5px);
     border-radius: 50%;
     position: absolute;
     bottom: -480px;
     right: 0px;
     z-index: -2;
-    animation: homeAnim 26s infinite alternate;
+    animation: homeAnim 5s infinite linear ;
 
     @media screen and (max-width: 650px){
       height: 400px;
@@ -22,13 +24,43 @@
     }
 
     @keyframes homeAnim {
+      0% {
+        transform: rotate(0deg);
+        filter: blur(5px);
+      }
       50% {
-        transform: scale(0.8);
+        filter: blur(30px);
       }
-      100% {
-        transform: scale(1.1);
-      }
+     
+     100% {
+      transform: rotate(360deg);
+      filter: blur(5px);
+     }
     }
+    @media screen and (max-width: 430px){
+      display: none;
+    }
+  }
+
+  &::before {
+    content: '';
+    height: 800px;
+    width: 800px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -480px;
+    right: 0px;
+    z-index: 2;
+    
+
+    @media screen and (max-width: 650px){
+      height: 400px;
+      width: 400px;
+      bottom: -270px;
+    }
+
+    
     @media screen and (max-width: 430px){
       display: none;
     }
@@ -61,7 +93,7 @@
           height: 225px;
           width: 225px;
           border-radius: 50%;
-          border: 1px $color-2 solid;
+          border: 1px rgb(213, 2, 255) solid;
           top: -40px;
           left: -180px;
           z-index: -1;

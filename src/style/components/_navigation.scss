@@ -2,51 +2,60 @@
   position: absolute;
   top: 1rem;
   left: 1.4rem;
+  padding: 5px;
   font-size: 1.4rem;
   line-height: 28px;
-  color: $color-4;
+  color: rgb(255, 109, 122);
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
 
+  @media screen and (max-width: 430px){
+    left:30px;
+    width: 100%;
+    font-size: 1rem;
+    top: 10px;
+  }
+  
   &:before {
     content: '';
     position: absolute;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    background: $color-3;
-    top: -150px;
-    left: -160px;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgb(51, 0, 255);
+    filter: blur(5px);
     z-index: -1;
-    animation: navAnim 20s infinite alternate;
+    animation: navAnim 2s infinite alternate;
 
     @keyframes navAnim {
       50% {
-        transform: scale(1.2);
+        transform: scale(1.1);
+        background: rgb(255, 255, 255);
       }
       100% {
         transform: scale(1);
+        background: rgb(48, 195, 80);
       }
     }
-    @media screen and (max-width: 430px){
-      height: 50px;
-      width: 50px;
-    }
+
   }
   .nav-active {
-    color: $black;
+    color: white;
   }
   ul:hover li:not(:hover) {
     opacity: .5;
   }
   ul:hover li:hover {
-    color: $black;
+    color: rgb(195, 184, 252);
   }
 
   .nav-portfolio {
     cursor: pointer;
     display: flex;
     // padding-right: 6rem;
-    transition: .5s;
-
+    transition: .8s;
+    
     &:hover .nav-projects,
     .nav-projects:hover {
 
@@ -61,13 +70,26 @@
     .nav-projects {
       position: absolute;
       visibility: hidden;
+      left: 23px;
       opacity: 0;
-      padding: 0 40px;
-      width: 300px;
+      padding: 0 30px;
+      width: 150px;
       transform: translateX(70px);
       transition: .3s ;
       perspective: 500px;
-
+      background: rgb(0, 0, 0);
+      border: 1px rgb(2, 255, 65) solid;
+      border-radius: 10px;
+     
+      @media screen and (max-width: 430px){
+        height: 110px;
+        width: 100%;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
       li {
         transform: rotatey(30deg) scaleX(1.2);
         transform-origin: center;
