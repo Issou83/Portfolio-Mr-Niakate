@@ -7,8 +7,8 @@
     content: "";
     height: 340px;
     width: 340px;
-    border: 1px solid $color-2;
-    border-radius: 50%;
+    border: 1px solid blue;
+    border-radius: 15px;
     position: absolute;
     bottom: -200px;
     left: -80px;
@@ -26,31 +26,103 @@
   }
 
   .navigation {
-    top: 5px;
-    left: 60%;
-    font-size: 1.1rem;
-    line-height: 20px;
-    transform: translateY(-100%);
-    animation: navProject 1s ease forwards;
-
-    @media screen and (max-width: 650px){
-      left: 70%;
+    position: absolute;
+    top: 1rem;
+    left: 1.4rem;
+    padding: 5px;
+    font-size: 1.4rem;
+    line-height: 28px;
+    color: rgb(255, 109, 122);
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+  
+    @media screen and (max-width: 430px){
+      left:30px;
+      width: 100%;
+      font-size: 1rem;
+      top: 10px;
+    }
+    
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      background: rgb(51, 0, 255);
+      filter: blur(5px);
+      z-index: -1;
+      animation: navAnim 2s infinite alternate;
+  
+      @keyframes navAnim {
+        50% {
+          transform: scale(1.1);
+          background: rgb(255, 255, 255);
+        }
+        100% {
+          transform: scale(1);
+          background: rgb(48, 195, 80);
+        }
+      }
+  
+    }
+    .nav-active {
+      color: white;
+    }
+    ul:hover li:not(:hover) {
+      opacity: .5;
+    }
+    ul:hover li:hover {
+      color: rgb(195, 184, 252);
     }
   
-    @keyframes navProject {
-      to {
-        transform: translateY(0);
+    .nav-portfolio {
+      cursor: pointer;
+      display: flex;
+      // padding-right: 6rem;
+      transition: .8s;
+      
+      &:hover .nav-projects,
+      .nav-projects:hover {
+  
+        visibility: visible;
+        opacity: 1;
+  
+        li {
+          transform: rotatey(0deg)
+        }
       }
-    }
-
-    &:before {
-      left: -120px;
-      top: -250px;
-    }
-
-    .nav-projects {
-      transform: translateX(67px);
-      padding: 0 20px;
+  
+      .nav-projects {
+        position: absolute;
+        visibility: hidden;
+        left: 23px;
+        opacity: 0;
+        padding: 0 30px;
+        width: 150px;
+        transform: translateX(70px);
+        transition: .3s ;
+        perspective: 500px;
+        background: rgb(0, 0, 0);
+        border: 1px rgb(2, 255, 65) solid;
+        border-radius: 10px;
+       
+        @media screen and (max-width: 430px){
+          height: 110px;
+          width: 100%;
+          left: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        
+        li {
+          transform: rotatey(30deg) scaleX(1.2);
+          transform-origin: center;
+          transition: .3s;
+        }
+      }
     }
   }
   .logo {
@@ -67,7 +139,7 @@
     }
   }
   .project-main {
-    margin: 8rem 1rem 0;
+    margin: 20rem 1rem 0;
     display: grid;
     grid-template-columns: 33% 67%;
     position: relative;
@@ -132,8 +204,9 @@
           content: "";
           height: 340px;
           width: 340px;
-          background: $color-3;
-          border-radius: 50%;
+          background: $color-1;
+          border: 1px solid rgb(255, 0, 0);
+          border-radius: 15px;
           position: absolute;
           top: -28px;
           left: 70px;
@@ -170,10 +243,11 @@
       .img-container {
         border-radius: 5px;
         box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.26);
-        width: 600px;
-        height: 380px;
+        width: 70%;
+        height: 500px;
         overflow: hidden;
         position: relative;
+        border: #6e0dd0 solid 3px;
 
         @media screen and (max-width: 940px){
           height: 300px;
@@ -196,10 +270,10 @@
 
         img {
           overflow: hidden;
-          object-fit: cover;
+
           object-position: 0%;
           width: 100%;
-          height: 100%;
+          height: auto;
           position: absolute;
           transition: 0.4s ease-out;
           position: relative;
@@ -233,7 +307,7 @@
   }
   .button-container {
     width: 130px;
-
+    background: transparent;
     a {
       .button {
         display: flex;
@@ -257,19 +331,49 @@
   .random-circle {
     position: absolute;
     height: 400px;
+    left: -1px;
+
+    background: linear-gradient(45deg ,#e6fb04, #ff6600, #00ff66, #00ffff,
+  #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff );
     width: 400px;
-    background: $color-3;
     border-radius: 50%;
     z-index: -1;
-    animation: circleAnim 16s infinite alternate;
+    animation: circleAnim 10s infinite ease-in-out;
+
+    &::after {
+      content: "";
+      width: 98%;
+      height: 98%;
+      top: 1%;
+
+      position: absolute;
+      left: 0;
+      z-index: -3;
+      background: $color-1;
+      border: 1px solid rgb(179, 255, 0);
+      border-radius: 50%;
+    }
 
     @keyframes circleAnim {
+      0% {
+        transform: rotate(0deg);
+        
+        scale: 1;
+        filter: blur(5px);
+      }
       50% {
-        transform: scale(0.7);
+        transform: rotate(200deg);
+        filter: blur(20px);
+        
+        scale: 2;
       }
-      100% {
-        transform: scale(1);
-      }
+     
+     100% {
+      transform: rotate(360deg);
+      
+      scale: 1;
+      filter: blur(5px);
+     }
     }
     
     @media screen and (max-width: 630px){
