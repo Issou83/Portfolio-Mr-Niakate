@@ -43,7 +43,7 @@ const ContactForm = () => {
     <div className="form-container">
       <h2>contactez-nous</h2>
       <form ref={form} onSubmit={sendEmail} className="form-content">
-        <label>nom</label>
+        <label>Nom</label>
         <input type="text" name="name" required autoComplete="off" id="name" />
         <label>Email</label>
         <input

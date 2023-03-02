@@ -3,17 +3,33 @@
   width: 100vw;
   height: 100vh;
 
-  &:after {
+  &:before {
     content: "";
+    position: absolute;
     height: 700px;
     width: 700px;
-    background: $color-3;
-    border-radius: 50%;
-    position: absolute;
     top: 150px;
     right: -460px;
+    background: black;
+    border-radius: 50%;
+    animation: contactAnim 24s alternate infinite;
+
+  }
+
+  &:after {
+    content: "";
+    height: 705px;
+    width: 705px;
+    background:  linear-gradient(blue, red);
+    border-radius: 50%;
+    position: absolute;
+    top: 148px;
+    right: -460px;
     z-index: -10;
-    animation: contactAnim 25s alternate infinite;
+    animation: contactAnim 4s alternate infinite;
+    filter: blur(10px);
+
+    
 
     @media screen and (max-width: 840px) {
       height: 400px;
@@ -26,12 +42,19 @@
     }
 
     @keyframes contactAnim {
+      0% {
+        transform: rotate(0deg);
+        filter: blur(10px);
+      }
       50% {
-        transform: scale(1.4);
+        filter: blur(300px);
+        scale: 0.5;
       }
-      100% {
-        transform: scale(1);
-      }
+     
+     100% {
+      transform: rotate(360deg);
+      filter: blur(10px);
+     }
     }
   }
   .navigation {
