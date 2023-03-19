@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import Logo from "../components/Logo";
 import ContactForm from "../components/ContactForm";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import SocialNetwork from "../components/SocialNetwork";
+// import SocialNetwork from "../components/SocialNetwork";
 import Buttons from "../components/Buttons";
 import { motion } from "framer-motion";
 
@@ -51,9 +51,10 @@ const Contact = () => {
                             </CopyToClipboard>
                         </div>
                     </div>
-                    <SocialNetwork />
+                    {/* <SocialNetwork /> */}
+                   
                     <div className="credits">
-                        <p>Niakate Issoumaïla - 2023</p>
+                    <p>Niakate I - 2023</p>
                     </div>
                 </div>
                 <Buttons  left={"/projet-4"} />

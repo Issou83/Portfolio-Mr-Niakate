@@ -1,4 +1,5 @@
 import React from 'react';
+import logogit from "../assets/fonts/img/github.png";
 
 const SocialNetwork = () => {
     const anim = () => {
@@ -15,18 +16,21 @@ const SocialNetwork = () => {
 
 
     return (
+        // <a href={currentProject.gitlink}  className="linkGit" target="_blank" rel="noopener noreferrer">
+        // <span className='git'></span>
+        // </a>
         <div className='social-network'>
             <ul className="content">
-                <a href="https://www.facebook.com" 
+                <a href="https://github.com/Issou83" 
                 taget="_blank" 
                 rel="noopener noreferrer" 
                 className='hover'
                 onMouseOver={anim}>
         <li>
-            <i className='fab fa-facebook-f'></i>
+        <img  className='linkGit' src={logogit} alt=''></img>
         </li>
                 </a>
-                <a href="https://www.twitter.com" 
+                {/* <a href="https://www.twitter.com" 
                 taget="_blank" 
                 rel="noopener noreferrer" 
                 className='hover'
@@ -34,15 +38,15 @@ const SocialNetwork = () => {
         <li>
             <i className='fab fa-twitter'></i>
         </li>
-                </a>
-                <a href="https://www.instagram.com" 
+                </a> */}
+                {/* <a href="https://www.instagram.com" 
                 taget="_blank" rel="noopener noreferrer" 
                 className='hover'
                 onMouseOver={anim}>
         <li>
             <i className='fab fa-instagram'></i>
         </li>
-                </a>
+                </a> */}
             </ul>
         </div>
     );

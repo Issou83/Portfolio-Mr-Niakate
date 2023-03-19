@@ -5,6 +5,7 @@ import Mouse from '../components/Mouse';
 import Navigation from '../components/Navigation';
 import SocialNetwork from '../components/SocialNetwork';
 import { motion } from "framer-motion";
+import Logo from '../components/Logo';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Mouse />
             <div className="home">
             <Navigation />
+            <Logo/>
             <SocialNetwork />
             <div className="home-main">
                 <div className="main-content">
