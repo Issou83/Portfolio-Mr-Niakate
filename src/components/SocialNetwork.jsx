@@ -28,7 +28,7 @@ const SocialNetwork = () => {
                 className='hover'
                 onMouseOver={anim}>
         <li>
-        <img  className='linkGit' src={logogit} alt=''></img>
+        <img  className='linkGit' src={logogit} alt='Logo Github'></img>
         </li>
                 </a>
     
@@ -38,7 +38,7 @@ const SocialNetwork = () => {
                 className='hover'
                 onMouseOver={anim}>
         <li>
-        <img  className='linkGit' src={linkedin} alt=''></img>
+        <img  className='linkGit' src={linkedin} alt='Logo Linkedin'></img>
         </li>
                 </a>
                 {/* <a href="https://www.twitter.com" 

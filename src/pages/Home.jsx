@@ -19,12 +19,12 @@ const Home = () => {
       <div className="home">
         <Navigation />
         <div className="logos">
-          <img src={Html} alt="" className="logoTechnos" />
-          <img src={Css} alt="" className="logoTechnos" />
-          <img src={Sass} alt="" className="logoTechnos" />
-          <img src={Js} alt="" className="logoTechnos" />
-          <img src={ReacT} alt="" className="logoTechnos" />
-          <img src={Node} alt="" className="logoTechnos" />
+          <img src={Html} alt="logo html" className="logoTechnos" />
+          <img src={Css} alt="Logo css" className="logoTechnos" />
+          <img src={Sass} alt="logo sass" className="logoTechnos" />
+          <img src={Js} alt="Logo Javascript" className="logoTechnos" />
+          <img src={ReacT} alt="Logo react" className="logoTechnos" />
+          <img src={Node} alt="Logo Node.js" className="logoTechnos" />
         </div>
         <SocialNetwork />
         <div className="home-main">
