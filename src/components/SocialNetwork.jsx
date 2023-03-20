@@ -1,5 +1,6 @@
 import React from 'react';
 import logogit from "../assets/fonts/img/github.png";
+import linkedin from "../assets/fonts/img/linkedin.png"
 
 const SocialNetwork = () => {
     const anim = () => {
@@ -28,6 +29,16 @@ const SocialNetwork = () => {
                 onMouseOver={anim}>
         <li>
         <img  className='linkGit' src={logogit} alt=''></img>
+        </li>
+                </a>
+    
+                <a href="https://github.com/Issou83" 
+                taget="_blank" 
+                rel="noopener noreferrer" 
+                className='hover'
+                onMouseOver={anim}>
+        <li>
+        <img  className='linkGit' src={linkedin} alt=''></img>
         </li>
                 </a>
                 {/* <a href="https://www.twitter.com" 

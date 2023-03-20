@@ -4,20 +4,30 @@
   position: absolute;
 
   &:after {
-    content: '';
+    content: "";
     height: 808px;
     width: 808px;
-    background: linear-gradient(45deg ,#e6fb04, #ff6600, #00ff66, #00ffff,
-    #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff );
+    background: linear-gradient(
+      45deg,
+      #e6fb04,
+      #ff6600,
+      #00ff66,
+      #00ffff,
+      #ff00ff,
+      #ff0099,
+      #6e0dd0,
+      #ff3300,
+      #099fff
+    );
     filter: blur(5px);
     border-radius: 50%;
     position: absolute;
     bottom: -580px;
     right: 0px;
     z-index: -2;
-    animation: homeAnim 5s infinite linear ;
+    animation: homeAnim 5s infinite linear;
 
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 650px) {
       height: 400px;
       width: 400px;
       bottom: -270px;
@@ -31,20 +41,20 @@
       50% {
         filter: blur(30px);
       }
-     
-     100% {
-      transform: rotate(360deg);
-      filter: blur(5px);
-     }
+
+      100% {
+        transform: rotate(360deg);
+        filter: blur(5px);
+      }
     }
-    
-    @media screen and (max-width: 430px){
+
+    @media screen and (max-width: 430px) {
       display: none;
     }
   }
 
   &::before {
-    content: '';
+    content: "";
     height: 800px;
     width: 800px;
     background: black;
@@ -53,16 +63,14 @@
     bottom: -580px;
     right: 5px;
     z-index: 2;
-    
 
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 650px) {
       height: 400px;
       width: 400px;
       bottom: -270px;
     }
 
-    
-    @media screen and (max-width: 430px){
+    @media screen and (max-width: 430px) {
       display: none;
     }
   }
@@ -75,33 +83,33 @@
 
     .main-content {
       user-select: none;
-
+      margin-bottom: 200px;
       h1 {
         font-size: 3.7rem;
         position: relative;
         font-family: $font-2;
 
-        @media screen and (max-width: 650px){
+        @media screen and (max-width: 650px) {
           font-size: 2rem;
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: 1200px) {
           font-size: 5rem;
         }
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
-          height: 225px;
-          width: 225px;
+          height: 150px;
+          width: 150px;
           border-radius: 50%;
           border: 1px rgb(213, 2, 255) solid;
-          top: -40px;
-          left: -180px;
+          top: -13px;
+          left: -46px;
           z-index: -1;
           animation: h1Anim 1.5s forwards ease;
           transform: scale(0);
 
-          @media screen and (max-width: 850px){
+          @media screen and (max-width: 850px) {
             height: 110px;
             width: 110px;
             left: -40px;
@@ -119,13 +127,33 @@
         font-size: 4.2rem;
         font-weight: 100;
 
-        @media screen and (max-width: 650px){
+        @media screen and (max-width: 650px) {
           font-size: 2rem;
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: 1200px) {
           font-size: 5rem;
         }
       }
     }
   }
+}
+
+.logoMarque {
+  left: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.logos {
+  bottom: 90px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 70%;
+  align-items: center;
+  height: 90px;
+}
+
+.logoTechnos {
+  height: 40px;
+  padding: 5px 5px;
 }
