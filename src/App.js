@@ -7,6 +7,7 @@ import Project3 from './pages/Project3';
 import Project4 from './pages/Project4';
 import Project5 from './pages/Project5';
 import Project6 from './pages/Project6';
+import Project7 from './pages/Project7';
 import Contact from './pages/contact';
 import NotFound from './pages/NotFound';
 import { AnimatePresence } from 'framer-motion';
@@ -23,6 +24,7 @@ const App = () => {
       <Route path='/projet-4' element={<Project4 />} />
       <Route path='/projet-5' element={<Project5 />} />
       <Route path='/projet-6' element={<Project6 />} />
+      <Route path='/projet-7' element={<Project7 />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/*' element={<NotFound />} />
     </Routes>
