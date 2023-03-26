@@ -34,6 +34,8 @@ $red: rgb(253, 87, 87);
 }
 html { 
   scroll-behavior: unset;
+  width: 100%;
+  height: 100%;
 }
 a,
 a:visited {
@@ -41,8 +43,9 @@ a:visited {
 }
 body {
   font-family: $font-1;
-  height: 100vh;
-  background: linear-gradient(243deg, rgba(2,0,36,1) 0%, rgba(114,85,85,1) 76%, rgba(3,160,192,1) 100%);
+  width: 100%;
+  height: 100%;
+  background:black;
   color: $black;
   overflow: hidden;
 

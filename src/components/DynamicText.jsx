@@ -4,7 +4,7 @@ const DynamiqueText = () => {
     useEffect(() => {
         const target = document.getElementById("text-target")
 
-        let array = ["E-commerce", "vitrine", "API-Rest"];
+        let array = ["E-commerce", "SEO" , "Vitrine", "API-Rest"];
         let wordIndex = 0;
         let letterIndex = 0;
 

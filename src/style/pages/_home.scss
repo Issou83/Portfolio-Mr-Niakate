@@ -1,12 +1,42 @@
 .home {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: absolute;
+}
 
-  &:after {
+.myLogo {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  margin-top: 150px;
+}
+
+.blockTitle {
+  position: absolute;
+  height: auto;
+  width: auto;
+  padding: 0px 170px 22px 20px;
+  margin-bottom: 130PX;
+border-radius: 6px;
+  background: black;
+
+  @media screen and (max-width: 992px) {
+    padding: 0px 100px 22px 20px;
+  }
+  @media screen and (min-width: 768px) {
+    
+  }
+
+  &::before , &::after{
     content: "";
-    height: 808px;
-    width: 808px;
+    position: absolute;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    top: -3px;
+    left: -3px;
+    // border-radius: 18px;
     background: linear-gradient(
       45deg,
       #e6fb04,
@@ -20,119 +50,94 @@
       #099fff
     );
     filter: blur(5px);
-    border-radius: 50%;
-    position: absolute;
-    bottom: -580px;
-    right: 0px;
-    z-index: -2;
-    animation: homeAnim 5s infinite linear;
-
-    @media screen and (max-width: 650px) {
-      height: 400px;
-      width: 400px;
-      bottom: -270px;
-    }
+    z-index: -3;
+    background-size: 200%;
+    animation: homeAnim 720s linear infinite;
 
     @keyframes homeAnim {
       0% {
-        transform: rotate(0deg);
-        filter: blur(5px);
+        background-position: 0 0;
       }
       50% {
-        filter: blur(30px);
+        // background-position: 600% 0;
+        background-position-x: 3000%;
       }
 
       100% {
-        transform: rotate(360deg);
-        filter: blur(5px);
+        background-position: 0 0;
       }
-    }
-
-    @media screen and (max-width: 430px) {
-      display: none;
     }
   }
 
-  &::before {
-    content: "";
-    height: 800px;
-    width: 800px;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -580px;
-    right: 5px;
-    z-index: 2;
-
-    @media screen and (max-width: 650px) {
-      height: 400px;
-      width: 400px;
-      bottom: -270px;
-    }
-
-    @media screen and (max-width: 430px) {
-      display: none;
-    }
+  &::after {
+    margin-top: 100px;
+    width: calc(150%);
+    left: -25%;
+    top: 250px;
+    height: 30px;
+    transform: perspective(2rem) rotateX(10deg);
+    filter: blur(50px);
   }
+}
 
-  .home-main {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    height: 95%;
+.home-main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
 
-    .main-content {
-      user-select: none;
-      margin-bottom: 200px;
-      h1 {
-        font-size: 3.7rem;
-        position: relative;
-        font-family: $font-2;
+  .main-content {
+    user-select: none;
+    h1 {
+      font-size: 80px;
+      position: relative;
+      font-family: $font-2;
+      z-index: 1;
+      @media screen and (max-width: 992px) {
+        font-size: 60px;
+      }
+      @media screen and (min-width: 768px) {
+        
+      }
 
-        @media screen and (max-width: 650px) {
-          font-size: 2rem;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        border: 2px rgb(2, 19, 252) solid;
+        top: -30px;
+        left: -80px;
+        z-index: -2;
+        animation: h1Anim 1.5s forwards ease;
+        transform: scale(0);
+
+        @media screen and (max-width: 992px) {
+          height: 122px;
+          width: 122px;
+          top: -15px;
         }
-        @media screen and (min-width: 1200px) {
-          font-size: 5rem;
+        @media screen and (min-width: 768px) {
+          
         }
 
-        &:before {
-          content: "";
-          position: absolute;
-          height: 150px;
-          width: 150px;
-          border-radius: 50%;
-          border: 1px rgb(213, 2, 255) solid;
-          top: -13px;
-          left: -46px;
-          z-index: -1;
-          animation: h1Anim 1.5s forwards ease;
-          transform: scale(0);
-
-          @media screen and (max-width: 850px) {
-            height: 110px;
-            width: 110px;
-            left: -40px;
-            top: -15px;
-          }
-
-          @keyframes h1Anim {
-            to {
-              transform: scale(1);
-            }
+        @keyframes h1Anim {
+          to {
+            transform: scale(1);
           }
         }
       }
-      h2 {
-        font-size: 4.2rem;
-        font-weight: 100;
-
-        @media screen and (max-width: 650px) {
-          font-size: 2rem;
-        }
-        @media screen and (min-width: 1200px) {
-          font-size: 5rem;
-        }
+    }
+    h2 {
+      font-size: 80px;
+      font-weight: 100;
+      z-index: 3;
+      @media screen and (max-width: 992px) {
+        font-size: 60px;
+      }
+      @media screen and (min-width: 768px) {
+        
       }
     }
   }
@@ -148,7 +153,7 @@
   bottom: 90px;
   display: flex;
   justify-content: space-around;
-  padding: 0 70%;
+  padding: 0 50%;
   align-items: center;
   height: 90px;
 }

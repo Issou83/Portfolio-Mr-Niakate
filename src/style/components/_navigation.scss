@@ -47,14 +47,14 @@
     opacity: .5;
   }
   ul:hover li:hover {
-    color: rgb(195, 184, 252);
+    color: rgb(255, 255, 255);
   }
 
   .nav-portfolio {
     cursor: pointer;
     display: flex;
     // padding-right: 6rem;
-    transition: .8s;
+    transition: 1s;
     
     &:hover .nav-projects,
     .nav-projects:hover {
@@ -73,14 +73,15 @@
       left: 23px;
       opacity: 0;
       padding: 0 30px;
-      width: 150px;
+      width: 300px;
       transform: translateX(70px);
       transition: .3s ;
       perspective: 500px;
       background: rgb(0, 0, 0);
-      border: 1px rgb(2, 255, 65) solid;
+      border: 1px rgb(255, 234, 2) solid;
       border-radius: 10px;
-     
+      z-index: 30;
+      list-style-type: circle;
       @media screen and (max-width: 430px){
         height: 110px;
         width: 100%;
@@ -93,7 +94,7 @@
       li {
         transform: rotatey(30deg) scaleX(1.2);
         transform-origin: center;
-        transition: .3s;
+        transition: .9s;
       }
     }
   }

@@ -11,6 +11,7 @@ import Js from "../assets/fonts/img/JavaScript_logo.svg";
 import Sass from "../assets/fonts/img/Sass_Logo.svg";
 import ReacT from "../assets/fonts/img/React-icon.svg";
 import Node from "../assets/fonts/img/Node.js_logo.svg";
+import Logo from "../components/Logo";
 
 const Home = () => {
   return (
@@ -18,6 +19,8 @@ const Home = () => {
       <Mouse />
       <div className="home">
         <Navigation />
+        <div className="myLogo"><Logo/></div>
+        
         <div className="logos">
           <img src={Html} alt="logo html" className="logoTechnos" />
           <img src={Css} alt="Logo css" className="logoTechnos" />
@@ -27,7 +30,10 @@ const Home = () => {
           <img src={Node} alt="Logo Node.js" className="logoTechnos" />
         </div>
         <SocialNetwork />
+       
         <div className="home-main">
+   
+        <div className="blockTitle glow">
           <div className="main-content">
             <motion.h1
               drag
@@ -54,6 +60,7 @@ const Home = () => {
               <DynamicText />
             </motion.h2>
           </div>
+        </div>
         </div>
         <Buttons right={"/projet-1"} />
       </div>

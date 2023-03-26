@@ -17,24 +17,27 @@
     0% {
       color: blue;
     }
-    50% {
+    33% {
       color: #ec006e;
+    }
+    66% {
+      color: #ecdc00;
     }
     100% {
       color: blue;
     }
   }
   .letter {
-    transform: translateZ(200px);
+    transform: translateY(200px);
   }
   @keyframes anim {
     25% {
       transform: translateZ(0px);
       opacity: 1;
     }
-    32% {
+    30% {
       opacity: 0;
-      transform: translateZ(-280px) translateX(200px);
+      transform:  translateY(200px);
     }
   }
 }
