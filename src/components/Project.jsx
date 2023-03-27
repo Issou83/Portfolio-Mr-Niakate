@@ -59,7 +59,14 @@ const Project = ({ projectNumber }) => {
       transition={transition}
       variants={variants}
     >
+ 
       <div className="project-content">
+      <div className="container-circle">
+           <span
+        className="random-circle"
+        style={{ left, top, transform: size }}
+      ></span>
+      </div>
         <h1>{currentProject.title}</h1>
         <p>{currentProject.date}</p>
         <ul className="languages">
@@ -103,10 +110,7 @@ const Project = ({ projectNumber }) => {
           </a>
         </div>
       </motion.div>
-      <span
-        className="random-circle"
-        style={{ left, top, transform: size }}
-      ></span>
+ 
     </motion.div>
   );
 };

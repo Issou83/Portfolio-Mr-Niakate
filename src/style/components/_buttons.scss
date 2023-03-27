@@ -9,24 +9,43 @@
     user-select: none;
     padding: 0 14px;
 
+    @media screen and (max-width: 768px) {
+      top: 400px;
+    }
+    @media screen and (max-width: 620px) {
+      top: 400px;
+    }
+
     &:hover {
       font-size: 6.8rem;
       color: rgb(251, 255, 0);
     }
-    animation: jumpArrow 1s ease-in-out infinite;
+    animation: jumpArrow 3s ease-in-out infinite;
 
     @keyframes jumpArrow {
-      0% {color: rgb(0, 255, 0);}
-      50% {color: rgb(255, 0, 55);}
-      100% {color: rgb(0, 255, 0);}
+      0% {
+        color: rgb(0, 255, 0);
+      }
+      50% {
+        color: rgb(255, 0, 55);
+      }
+      100% {
+        color: rgb(0, 255, 0);
+      }
     }
   }
 
   .left {
     left: 24px;
+    @media screen and (max-width: 768px) {
+      left: 30px;
+    }
   }
 
   .right {
     right: -24px;
+    @media screen and (max-width: 768px) {
+      right: -20px;
+    }
   }
 }

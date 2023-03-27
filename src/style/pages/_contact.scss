@@ -12,8 +12,18 @@
     right: -460px;
     background: black;
     border-radius: 50%;
-    animation: contactAnim 24s alternate infinite;
+    animation: contactAnim 5s alternate infinite;
 
+
+    @media screen and (max-width: 768px) {
+      height: 400px;
+      width: 400px;
+      bottom: 50%;
+      right: 50%;
+    }
+    @media screen and (max-width: 430px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -31,11 +41,11 @@
 
     
 
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 768px) {
       height: 400px;
       width: 400px;
-      top: 520px;
-      right: -140px;
+      bottom: 50%;
+      right: 50%;
     }
     @media screen and (max-width: 430px) {
       display: none;
@@ -57,30 +67,34 @@
      }
     }
   }
-  .navigation {
-    @media screen and (max-width: 440px) {
-      display: none;
-    }
-  }
+  // .navigation {
+  //   @media screen and (max-width: 440px) {
+  //     display: none;
+  //   }
+  // }
   .logo {
-    top: 8px;
+    top: 1rem;
     right: 1rem;
   }
 
   .form-container {
-    margin: 7% 0 0 24%;
+    margin: 0% 0 0 24%;
     max-width: 50%;
     position: relative;
     max-width: 300px;
 
-    @media screen and (max-width: 740px) {
-      margin: 2rem 0 0 30%;
+    @media screen and (max-width: 768px) {
+      margin: 30% 0 0 14%;
     }
     @media screen and (max-width: 440px) {
       margin-left: 2rem;
     }
     h2 {
       margin-bottom: 50px;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+      }
 
       &:after {
         content: "";
@@ -112,7 +126,7 @@
       }
       input {
         padding: 10px 6px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
     textarea {
@@ -135,8 +149,19 @@
       cursor: pointer;
       transition: 0.2s;
       border: none;
+      @media screen and (max-width: 768px) {
+        height: 40px;
+        width: 90px;
+        font-size: 1rem;
+      }
+
     }
   }
+
+  #mess {
+    color: white;
+  }
+
   .formMessage {
     p {
       border-radius: 20px;
@@ -161,9 +186,10 @@
   width: 30%;
   max-width: 500px;
 
-  @media screen and (max-width: 740px) {
+  @media screen and (max-width: 768px) {
     height: 200px;
     width: 100%;
+    bottom: -40px;
     max-width: 100%;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -172,7 +198,7 @@
       "d d d"
       "e e f";
   }
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 375px) {
     grid-template-rows: repeat(3, 60px);
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
@@ -180,13 +206,13 @@
       "d d d d d d"
       "e e e e f f";
   }
-  @media screen and (max-height: 500px) {
-    display: none;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 35%;
-    height: 83%;
-  }
+  // @media screen and (max-height: 500px) {
+  //   display: none;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   width: 35%;
+  //   height: 83%;
+  // }
 
   h4 {
     color: $color-4;
@@ -263,13 +289,13 @@
     width: 80%;
     margin: 0 auto;
 
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 768px) {
       width: 50%;
       grid-area: d;
     }
-    @media screen and (min-width: 1200px) {
-      font-size: 2rem;
-    }
+    // @media screen and (min-width: 1200px) {
+    //   font-size: 2rem;
+    // }
 
     .content {
       position: absolute;
@@ -282,7 +308,7 @@
     display: flex;
     flex-direction: column-reverse;
 
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 768px) {
       transform: translateY(20px);
       font-size: 0.7rem;
       margin-right: 1rem;

@@ -15,18 +15,22 @@
 
 .blockTitle {
   position: absolute;
+ 
   height: auto;
   width: auto;
   padding: 0px 170px 22px 20px;
-  margin-bottom: 130PX;
+  margin-bottom: 130px;
 border-radius: 6px;
   background: black;
 
   @media screen and (max-width: 992px) {
     padding: 0px 100px 22px 20px;
+    margin-bottom: 130px;
   }
-  @media screen and (min-width: 768px) {
-    
+  @media screen and (max-width: 768px) {
+    padding: 0px 0px 5px 20px;
+    margin-bottom: 130px;
+    top: 250px;
   }
 
   &::before , &::after{
@@ -70,13 +74,19 @@ border-radius: 6px;
   }
 
   &::after {
-    margin-top: 100px;
+    margin-top: 90px;
     width: calc(150%);
     left: -25%;
     top: 250px;
     height: 30px;
     transform: perspective(2rem) rotateX(10deg);
     filter: blur(50px);
+    @media screen and (max-width: 992px) {
+      margin-top: 0px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-top: 0px;
+    }
   }
 }
 
@@ -96,8 +106,8 @@ border-radius: 6px;
       @media screen and (max-width: 992px) {
         font-size: 60px;
       }
-      @media screen and (min-width: 768px) {
-        
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
       }
 
       &:before {
@@ -116,10 +126,14 @@ border-radius: 6px;
         @media screen and (max-width: 992px) {
           height: 122px;
           width: 122px;
-          top: -15px;
+          top: -17px;
+          left: -47px;
         }
-        @media screen and (min-width: 768px) {
-          
+        @media screen and (max-width: 768px) {
+          height: 71px;
+          width: 71px;
+          top: -14px;
+          left: -35px;
         }
 
         @keyframes h1Anim {
@@ -136,8 +150,8 @@ border-radius: 6px;
       @media screen and (max-width: 992px) {
         font-size: 60px;
       }
-      @media screen and (min-width: 768px) {
-        
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
       }
     }
   }
@@ -161,4 +175,7 @@ border-radius: 6px;
 .logoTechnos {
   height: 40px;
   padding: 5px 5px;
+  @media screen and (max-width: 620px) {
+    height: 30px;
+  }
 }
