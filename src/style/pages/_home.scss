@@ -29,8 +29,9 @@ border-radius: 6px;
   }
   @media screen and (max-width: 768px) {
     padding: 0px 0px 5px 20px;
-    margin-bottom: 130px;
-    top: 250px;
+    margin-bottom: 0px;
+    top: 230px;
+    width: 350px;
   }
 
   &::before , &::after{
@@ -161,6 +162,9 @@ border-radius: 6px;
   left: 30px;
   width: 100%;
   height: auto;
+  @media screen and (max-width: 520px) {
+    height: 25px;
+  }
 }
 
 .logos {
@@ -170,12 +174,18 @@ border-radius: 6px;
   padding: 0 50%;
   align-items: center;
   height: 90px;
+  @media screen and (max-width: 520px) {
+    height: 250px;
+  }
 }
 
 .logoTechnos {
   height: 40px;
   padding: 5px 5px;
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 768px) {
+    height: 30px;
+  }
+  @media screen and (max-width: 520px) {
     height: 30px;
   }
 }
