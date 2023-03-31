@@ -45,7 +45,7 @@ const Home = () => {
                 bottom: 250,
               }}
             >
-              NK.WebDev
+              NKT.WebDev
             </motion.h1>
             <motion.h2
               drag

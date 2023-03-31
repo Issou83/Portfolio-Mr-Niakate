@@ -33,6 +33,12 @@ border-radius: 6px;
     top: 350px;
     width: 250px;
   }
+  @media screen and (max-width: 620px) {
+    padding: 2px 0px 5px 5px;
+    margin-bottom: 0px;
+    top: 350px;
+    width: 170px;
+  }
 
   &::before , &::after{
     content: "";
@@ -57,7 +63,7 @@ border-radius: 6px;
     filter: blur(5px);
     z-index: -3;
     background-size: 200%;
-    animation: homeAnim 720s linear infinite;
+    animation: homeAnim 420s linear infinite;
 
     @keyframes homeAnim {
       0% {
@@ -78,7 +84,7 @@ border-radius: 6px;
     margin-top: 90px;
     width: calc(150%);
     left: -25%;
-    top: 250px;
+    top:150px;
     height: 30px;
     transform: perspective(2rem) rotateX(10deg);
     filter: blur(50px);
@@ -110,6 +116,9 @@ border-radius: 6px;
       @media screen and (max-width: 768px) {
         font-size: 20px;
       }
+      @media screen and (max-width: 620px) {
+        font-size: 12px;
+      }
 
       &:before {
         content: "";
@@ -131,10 +140,17 @@ border-radius: 6px;
           left: -47px;
         }
         @media screen and (max-width: 768px) {
-          height: 71px;
-          width: 71px;
-          top: -14px;
-          left: -35px;
+          height: 50px;
+          width: 50px;
+          top: -12px;
+          left: -27px;
+        }
+        @media screen and (max-width: 620px) {
+          height: 30px;
+          width: 30px;
+          top: -6.6px;
+          left: -15px;
+          border: 1px rgb(2, 19, 252) solid;
         }
 
         @keyframes h1Anim {
@@ -153,6 +169,9 @@ border-radius: 6px;
       }
       @media screen and (max-width: 768px) {
         font-size: 20px;
+      }
+      @media screen and (max-width: 620px) {
+        font-size: 14px;
       }
     }
   }
