@@ -64,6 +64,7 @@ const Home = () => {
         </div>
         <Buttons right={"/projet-1"} />
       </div>
+      <p>Création de votre site web moderne, pour que votre activité soit visible par vos potentiels clients </p>
     </div>
   );
 };
