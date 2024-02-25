@@ -59,14 +59,13 @@ const Project = ({ projectNumber }) => {
       transition={transition}
       variants={variants}
     >
- 
       <div className="project-content">
-      <div className="container-circle">
-           <span
-        className="random-circle"
-        style={{ left, top, transform: size }}
-      ></span>
-      </div>
+        <div className="container-circle">
+          <span
+            className="random-circle"
+            style={{ left, top, transform: size }}
+          ></span>
+        </div>
         <h1>{currentProject.title}</h1>
         <p>{currentProject.date}</p>
         <ul className="languages">
@@ -90,13 +89,15 @@ const Project = ({ projectNumber }) => {
           <img
             src={currentProject.img}
             alt={currentProject.title}
-            className="Image du projet"/>
+            className="Image du projet"
+          />
         </div>
         <div className="button-container">
           <a
             href={currentProject.link}
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             <span className="button">Voir le Projet</span>
           </a>
 
@@ -104,13 +105,17 @@ const Project = ({ projectNumber }) => {
             href={currentProject.gitlink}
             taget="_blank"
             rel="noopener noreferrer"
-            className="gitCode">
-            <img className="linkGit" src={logogit} alt="Lien Github du Projet"></img>
+            className="gitCode"
+          >
+            <img
+              className="linkGit"
+              src={logogit}
+              alt="Lien Github du Projet"
+            ></img>
             <p>Voir le Code :</p>
           </a>
         </div>
       </motion.div>
- 
     </motion.div>
   );
 };

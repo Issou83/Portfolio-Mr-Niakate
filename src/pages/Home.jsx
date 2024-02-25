@@ -15,12 +15,14 @@ import Logo from "../components/Logo";
 
 const Home = () => {
   return (
-    <div>
+    <div className="homeContainer">
       <Mouse />
       <div className="home">
         <Navigation />
-        <div className="myLogo"><Logo/></div>
-        
+        <div className="myLogo">
+          <Logo />
+        </div>
+
         <div className="logos">
           <img src={Html} alt="logo html" className="logoTechnos" />
           <img src={Css} alt="Logo css" className="logoTechnos" />
@@ -30,41 +32,45 @@ const Home = () => {
           <img src={Node} alt="Logo Node.js" className="logoTechnos" />
         </div>
         <SocialNetwork />
-       
+
         <div className="home-main">
-   
-        <div className="blockTitle glow">
-          <div className="main-content">
-            <motion.h1
-              drag
-              onDragEnd
-              dragConstraints={{
-                left: -250,
-                right: 950,
-                top: -200,
-                bottom: 250,
-              }}
-            >
-              NKT.WebDev
-            </motion.h1>
-            <motion.h2
-              drag
-              onDragEnd
-              dragConstraints={{
-                left: -250,
-                right: 950,
-                top: -200,
-                bottom: 250,
-              }}
-            >
-              <DynamicText />
-            </motion.h2>
+          <div className="blockTitle glow">
+            <div className="main-content">
+              <motion.h2
+                drag
+                onDragEnd
+                dragConstraints={{
+                  left: -250,
+                  right: 950,
+                  top: -200,
+                  bottom: 250,
+                }}
+              >
+                NKT.WebDev
+              </motion.h2>
+              <motion.h3
+                drag
+                onDragEnd
+                dragConstraints={{
+                  left: -250,
+                  right: 950,
+                  top: -200,
+                  bottom: 250,
+                }}
+              >
+                <DynamicText />
+              </motion.h3>
+            </div>
           </div>
-        </div>
         </div>
         <Buttons right={"/projet-1"} />
       </div>
-      <p>Création de votre site web moderne, pour que votre activité soit visible par vos potentiels clients </p>
+      <div className="titleHome">
+        <h1>
+          Création de votre site web moderne, pour que votre activité soit
+          visible par vos potentiels clients{" "}
+        </h1>
+      </div>
     </div>
   );
 };
