@@ -21,7 +21,8 @@ const ContactForm = () => {
         (res) => {
           console.log(res.text);
           form.current.reset();
-          formMess.innerHTML = "<p className='success'>Message envoyé !</p>";
+          formMess.innerHTML =
+            "<p className='success'>Message envoyé ! <br>Je vous recontacte au plus vite</p>";
 
           setTimeout(() => {
             formMess.innerHTML = "";
@@ -53,7 +54,7 @@ const ContactForm = () => {
           autoComplete="off"
           id="email"
         />
-        <label>Message</label>
+        <label>Décrivez votre projet</label>
         <textarea name="message" id="mess" />
         <input type="submit" value="Envoyer" className="hover button" />
       </form>
