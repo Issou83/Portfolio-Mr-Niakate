@@ -9,6 +9,7 @@
     animation: color 30s alternate infinite;
     perspective: 200px;
     transform: translateX(26px);
+    z-index: 0;
   }
   .word {
     position: absolute;
@@ -37,7 +38,7 @@
     }
     30% {
       opacity: 0;
-      transform:  translateY(200px);
+      transform: translateY(200px);
     }
   }
 }
