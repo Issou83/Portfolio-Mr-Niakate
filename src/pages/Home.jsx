@@ -5,12 +5,12 @@ import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
 import SocialNetwork from "../components/SocialNetwork";
 import { motion } from "framer-motion";
-import Html from "../assets/fonts/img/HTML5_logo.svg";
-import Css from "../assets/fonts/img/CSS3.svg";
-import Js from "../assets/fonts/img/JavaScript_logo.svg";
-import Sass from "../assets/fonts/img/Sass_Logo.svg";
-import ReacT from "../assets/fonts/img/React-icon.svg";
-import Node from "../assets/fonts/img/Node.js_logo.svg";
+// import Html from "../assets/fonts/img/HTML5_logo.svg";
+// import Css from "../assets/fonts/img/CSS3.svg";
+// import Js from "../assets/fonts/img/JavaScript_logo.svg";
+// import Sass from "../assets/fonts/img/Sass_Logo.svg";
+// import ReacT from "../assets/fonts/img/React-icon.svg";
+// import Node from "../assets/fonts/img/Node.js_logo.svg";
 import Logo from "../components/Logo";
 
 const Home = () => {
@@ -23,14 +23,14 @@ const Home = () => {
           <Logo />
         </div>
 
-        <div className="logos">
+        {/* <div className="logos">
           <img src={Html} alt="logo html" className="logoTechnos" />
           <img src={Css} alt="Logo css" className="logoTechnos" />
           <img src={Sass} alt="logo sass" className="logoTechnos" />
           <img src={Js} alt="Logo Javascript" className="logoTechnos" />
           <img src={ReacT} alt="Logo react" className="logoTechnos" />
           <img src={Node} alt="Logo Node.js" className="logoTechnos" />
-        </div>
+        </div> */}
         <SocialNetwork />
 
         <div className="home-main">
@@ -67,10 +67,13 @@ const Home = () => {
       </div>
       <div className="titleHome">
         <h1>
-          Création de votre site web moderne, pour que votre activité soit
-          visible par vos potentiels clients{" "}
+          Développement Web sur mesure à Pau et en région Nouvelle-Aquitaine{" "}
         </h1>
       </div>
+      <p className="phraseAccroche">
+        Bienvenue chez NKT.DevWeb, votre expert en solutions web, pour artisans
+        et PME en région. Basé dans les Pyrénées-Atlantiques (64).
+      </p>
     </div>
   );
 };

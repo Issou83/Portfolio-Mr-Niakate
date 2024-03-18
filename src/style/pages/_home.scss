@@ -14,10 +14,14 @@
   position: absolute;
   width: 100%;
   height: auto;
-  left: 50%;
-  margin-top: 150px;
-  @media screen and (max-width: 420px) {
-    display: none;
+  left: 85%;
+  margin-top: 0px;
+  top: 40px;
+  @media screen and (max-width: 650px) {
+    left: 80%;
+  }
+  @media screen and (max-width: 500px) {
+    left: 75%;
   }
 }
 
@@ -112,6 +116,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0 30%;
 
   @media screen and (max-width: 620px) {
@@ -120,6 +125,7 @@
 
   h1 {
     font-size: 20px;
+    font-weight: 200;
     text-align: center;
 
     @media screen and (max-width: 620px) {
@@ -128,7 +134,15 @@
   }
 }
 
+.phraseAccroche {
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  top: 500px;
+}
+
 .home-main {
+  padding-top: 50px;
   display: grid;
   align-items: center;
   justify-items: center;
