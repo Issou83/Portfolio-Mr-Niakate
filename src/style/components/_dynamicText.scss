@@ -1,44 +1,61 @@
 .dynamic-text {
   position: relative;
   display: flex;
+  font-size: 50px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 
   #text-target {
     display: flex;
     width: 300px;
     text-align: left;
-    animation: color 30s alternate infinite;
+    animation: color 0.75s alternate infinite;
     perspective: 200px;
     transform: translateX(26px);
-    z-index: 0;
   }
-  .word {
-    position: absolute;
+}
+
+/* @keyframes color {
+  0% {
+    color: rgb(255, 255, 255);
   }
-  @keyframes color {
-    0% {
-      color: rgb(0, 255, 255);
-    }
-    33% {
-      color: #ec006e;
-    }
-    66% {
-      color: #ecdc00;
-    }
-    100% {
-      color: blue;
-    }
+  33% {
+    color: #059b00;
   }
-  .letter {
-    transform: translateY(200px);
+  66% {
+    color: rgb(255, 255, 255);
   }
-  @keyframes anim {
-    25% {
-      transform: translateZ(0px);
-      opacity: 1;
-    }
-    30% {
-      opacity: 0;
-      transform: translateY(200px);
-    }
+  100% {
+    color: #059b00;
+  }
+} */
+
+.word {
+  animation: wordEntry 1s ease-out;
+}
+
+@keyframes wordEntry {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+    color: #ffffff;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+    color: #ff0000;
+  }
+  50% {
+    transform: translateY(-50px);
+    opacity: 1;
+    color: #059b00;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    color: #059b00;
   }
 }
