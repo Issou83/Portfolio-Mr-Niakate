@@ -1,11 +1,11 @@
 export const projectsData = [
   {
     id: 0,
-    title: "Site pour un transporteur",
+    title: "Site vitrine+",
     date: "",
     languages: ["React", "CSS"],
     infos:
-      "Réalisation d'un site vitrine pour une entreprise à activités locales, incluant les parties référencement et SEO, ainsi qu'une page de location de matériel. Une page administrateur a été créée pour la gestion de ces locations (images, titres et descriptions pour chacun des articles).",
+      "Réalisation d'un site vitrine (avec options) pour une entreprise locale, incluant référencement SEO et une page de location de matériel. Une interface d'administration permet la gestion des locations.",
     img: "./assets/img/Cazalet.png",
     link: "https://sarl-cazalet.com/",
     gitlink: "https://https://github.com/Issou83/sarlCazalet",
@@ -16,7 +16,7 @@ export const projectsData = [
     date: "",
     languages: ["React", "SASS"],
     infos:
-      "Réalisation de la partie frontend en React pour un site de location de logements. Depuis la page d'accueil, il est possible de cliquer sur une carte pour accéder aux détails du logement et au profil de l'hôte.",
+      "Développement du front-end en React pour un site de location de logements, offrant une navigation intuitive depuis une carte vers les détails des logements et les profils des hôtes.",
     img: "./assets/img/projet-5.png",
     link: "https://kasa-issou.netlify.app/",
     gitlink: "https://github.com/Issou83/Projet-KASA-OPC-P7.git",
