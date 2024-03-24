@@ -19,43 +19,43 @@ const Navigation = () => {
               to="/projet-1"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>SPA avec React</li>
+              <li>🚀Site pour Transtporteur</li>
             </NavLink>
             <NavLink
               to="/projet-2"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>E-commerce</li>
+              <li>🚀Locations de Logements</li>
             </NavLink>
             <NavLink
               to="/projet-3"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>SEO</li>
+              <li>🚀E-commerce</li>
             </NavLink>
             <NavLink
               to="/projet-4"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>Site Vitrine</li>
+              <li>🚀Référencement et SEO</li>
             </NavLink>
             <NavLink
               to="/projet-5"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>Dynamisation en SASS</li>
+              <li>🚀Site vitrine</li>
             </NavLink>
             <NavLink
               to="/projet-6"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>Projet en préparation</li>
+              <li>🚀Site pour la réstauration</li>
             </NavLink>
             <NavLink
               to="/projet-7"
               className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
             >
-              <li>Projet API Node.JS</li>
+              <li>🚀API et base de données</li>
             </NavLink>
           </ul>
         </li>

@@ -1,0 +1,19 @@
+.buttonContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  width: 110px;
+  border: 1px solid rgb(0, 255, 8);
+  border-radius: 50%;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}

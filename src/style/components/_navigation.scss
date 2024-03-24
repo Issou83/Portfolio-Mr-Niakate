@@ -5,23 +5,23 @@
   top: 1rem;
   left: 1rem;
   padding: 20px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 27px;
   color: rgb(255, 109, 122);
   background: rgb(0, 0, 0);
   border-radius: 50%;
   // border: 2px solid white;
 
-  @media screen and (max-width: 768px){
-    font-size: 22px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
     top: 10px;
   }
-  @media screen and (max-width: 680px){
+  @media screen and (max-width: 680px) {
     // font-size: 22px;
     // top: 10px;
     // line-height: 20px;
   }
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -31,10 +31,10 @@
     left: -3px;
     // border: 2px solid white;
     border-radius: 50%;
-    background:linear-gradient( #fdcd3b 1%, #000000 1%, );
+    background: linear-gradient(#fdcd3b 1%, #000000 1%);
     // filter: blur(5px);
     z-index: -3;
- 
+
     animation: circlA 2s linear infinite;
 
     @keyframes circlA {
@@ -58,7 +58,7 @@
     color: white;
   }
   ul:hover li:not(:hover) {
-    opacity: .5;
+    opacity: 0.5;
   }
   ul:hover li:hover {
     color: rgb(255, 255, 255);
@@ -69,15 +69,14 @@
     display: flex;
     // padding-right: 6rem;
     transition: 1s;
-    
+
     &:hover .nav-projects,
     .nav-projects:hover {
-
       visibility: visible;
       opacity: 1;
 
       li {
-        transform: rotatey(0deg)
+        transform: rotatey(0deg);
       }
     }
 
@@ -87,29 +86,29 @@
       left: 23px;
       opacity: 0;
       padding: 0 30px;
-      width: 300px;
-      transform: translateX(70px);
-      transition: .3s ;
+      width: 350px;
+      transform: translateX(0px);
+      transition: 0.3s;
       perspective: 500px;
       background: rgb(0, 0, 0);
       border: 1px rgb(255, 234, 2) solid;
       border-radius: 10px;
       z-index: 30;
       list-style-type: circle;
-      @media screen and (max-width: 430px){
-        padding: 0 5px;
+      @media screen and (max-width: 430px) {
+        // padding: 0 5px;
         // height: 110px;
         // width: 100%;
-        // left: 0px;
+        left: 0px;
         // display: flex;
         // flex-direction: column;
         // justify-content: center;
       }
-      
+
       li {
         transform: rotatey(30deg) scaleX(1.2);
         transform-origin: center;
-        transition: .9s;
+        transition: 0.9s;
       }
     }
   }

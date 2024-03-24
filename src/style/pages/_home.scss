@@ -272,3 +272,18 @@
     height: 30px;
   }
 }
+
+.buttonContactContainer {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: right;
+  }
+}

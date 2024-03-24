@@ -5,6 +5,7 @@ import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
 import SocialNetwork from "../components/SocialNetwork";
 import { motion } from "framer-motion";
+import ButtonContact from "../components/ButtonContact";
 // import Html from "../assets/fonts/img/HTML5_logo.svg";
 // import Css from "../assets/fonts/img/CSS3.svg";
 // import Js from "../assets/fonts/img/JavaScript_logo.svg";
@@ -78,6 +79,9 @@ const Home = () => {
         Rendez votre activité visible et communiquez vos evenements à tous.Basé
         dans les Pyrénées-Atlantiques (64).
       </p>
+      <div className="buttonContactContainer">
+        <ButtonContact />
+      </div>
     </div>
   );
 };
