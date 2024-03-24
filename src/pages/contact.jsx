@@ -44,13 +44,13 @@ const Contact = () => {
           </div>
           <div className="phone">
             <div className="content">
-              <a href="tel:0615285911">
+              <a href="tel:0679813535">
                 <div className="caseContact">
                   <h4>Mobile</h4>
                   <p
                     style={{ cursor: "pointer" }}
                     className="clipboard"
-                    onClick={() => alert("Téléphone copié !")}
+                    onClick={() => alert("Lancez l'appel pour me contacter")}
                   >
                     06 79 81 35 35
                   </p>
