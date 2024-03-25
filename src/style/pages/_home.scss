@@ -278,7 +278,7 @@
 .buttonContactContainer {
   content: "";
   position: absolute;
-  bottom: 15px;
+  bottom: 80px;
   width: 100%;
   height: auto;
   display: flex;
@@ -287,5 +287,6 @@
 
   @media screen and (min-width: 768px) {
     justify-content: right;
+    bottom: 25px;
   }
 }

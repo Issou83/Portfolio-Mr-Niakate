@@ -159,7 +159,6 @@
         font-size: 1rem;
       }
       @media screen and (max-width: 768px) {
-        margin-left: 50px;
       }
     }
   }
@@ -322,6 +321,12 @@
     }
     p {
       font-size: 0.9rem;
+      @media screen and (max-width: 375px) {
+        min-width: 100px;
+        text-align: end;
+        margin-left: 30px;
+        margin-top: 30px;
+      }
     }
   }
 }
