@@ -8,9 +8,9 @@ const ButtonContact = () => {
         to="/contact"
         className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
       >
-        Un projet? ...
+        Un projet ?...
         <br />
-        contactez-moi.
+        Contactez-moi.
       </NavLink>
     </div>
   );
