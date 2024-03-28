@@ -1,34 +1,68 @@
-@keyframes backgroundAnimation {
-  0% {
-    background: #3d3d3d;
-    box-shadow: inset 19px 19px 38px #000000, inset -19px -19px 38px #606060;
-  }
-  50% {
-    background: #000000;
-    box-shadow: inset 19px 19px 38px #606060, inset -19px -19px 38px #080808;
-  }
-  100% {
-    background: #3d3d3d;
-    box-shadow: inset 19px 19px 38px #000000, inset -19px -19px 38px #606060;
-  }
-}
+// @keyframes backgroundAnimation {
+//   0% {
+//     background: #3d3d3d;
+//     box-shadow: inset 19px 19px 38px #000000, inset -19px -19px 38px #606060;
+//   }
+//   50% {
+//     background: #000000;
+//     box-shadow: inset 19px 19px 38px #606060, inset -19px -19px 38px #080808;
+//   }
+//   100% {
+//     background: #3d3d3d;
+//     box-shadow: inset 19px 19px 38px #000000, inset -19px -19px 38px #606060;
+//   }
+// }
 
 .buttonContact {
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #77130a,
+    #c72727,
+    #77130a,
+    #c72727,
+    #77130a,
+    #c72727
+  );
+  background-size: 250%;
+  background-position: left;
+  color: #ff6608;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 110px;
-  width: 110px;
-  border-radius: 138px;
-  animation: backgroundAnimation 10s infinite linear;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
 
-  @media screen and (min-width: 768px) {
-    margin-right: 20px;
+  &::before {
+    position: absolute;
+    content: "Un projet...? Contactez-moi";
+    color: #ffffff;
+    text-align: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
   }
 
-  a {
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
+  &:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+
+  &:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }

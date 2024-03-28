@@ -26,7 +26,7 @@ const ContactForm = () => {
 
           setTimeout(() => {
             formMess.innerHTML = "";
-          }, 2000);
+          }, 4000);
         },
         (err) => {
           console.log(err.text);
