@@ -68,16 +68,15 @@ const Home = () => {
       </div>
       <div className="titleHome">
         <h1>
-          Développement Web sur mesure à Pau, Bayonne, Dax, Toulouse et dans
-          toute la région Nouvelle-Aquitaine{" "}
+          Développement Web sur mesure, au pixel près. Basé dans les
+          Pyrénées-Atlantiques (64).{" "}
         </h1>
       </div>
       <p className="phraseAccroche">
         Bienvenue chez NKT.DevWeb, votre expert en solutions web. Je vous
         accompagne durant tout votre projet, que vous soyez artisan,
-        collectivité ou encore une PME. Faites moi part de votre Projet Web.
-        Rendez votre activité visible et communiquez vos evenements à tous.Basé
-        dans les Pyrénées-Atlantiques (64).
+        collectivité ou encore une entreprise. Faites moi part de votre projet
+        Web. Rendez votre activité visible et communiquez vos evenements à tous.
       </p>
       <div className="buttonContactContainer">
         <ButtonContact />
