@@ -6,6 +6,8 @@ import ContactForm from "../components/ContactForm";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 // import SocialNetwork from "../components/SocialNetwork";
 import Buttons from "../components/Buttons";
+import ConsentBanner from "../components/ConsentBanner";
+
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -23,6 +25,8 @@ const Contact = () => {
   return (
     <main>
       <Mouse />
+      <ConsentBanner />
+
       <motion.div
         initial="out"
         exit="out"

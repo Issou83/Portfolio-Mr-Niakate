@@ -6,6 +6,8 @@ import Navigation from "../components/Navigation";
 import SocialNetwork from "../components/SocialNetwork";
 import { motion } from "framer-motion";
 import ButtonContact from "../components/ButtonContact";
+import ConsentBanner from "../components/ConsentBanner";
+
 // import Html from "../assets/fonts/img/HTML5_logo.svg";
 // import Css from "../assets/fonts/img/CSS3.svg";
 // import Js from "../assets/fonts/img/JavaScript_logo.svg";
@@ -17,6 +19,8 @@ import Logo from "../components/Logo";
 const Home = () => {
   return (
     <div className="homeContainer">
+      <ConsentBanner />
+
       <Mouse />
       <div className="home">
         <Navigation />

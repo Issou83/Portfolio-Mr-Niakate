@@ -20,18 +20,18 @@
       function gtag() {
         dataLayer.push(arguments);
       }
+
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+      });
+
       gtag("js", new Date());
 
-      gtag("config", "G-Y3DBHN5F1M");
+      gtag("config", "G-Y3DBHN5F1M", { anonymize_ip: true });
+      gtag("config", "G-W4FSZ9Z92C", { anonymize_ip: true });
     </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-W4FSZ9Z92C");
-    </script>
+
     <meta
       name="google-site-verification"
       content="lVQhGmy-5MRsAgS38pvSPf5D9UztYD4OJm7jC6XNeVg"
