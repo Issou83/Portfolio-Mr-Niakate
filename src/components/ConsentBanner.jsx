@@ -79,7 +79,7 @@ const styles = {
     borderRadius: "8px",
     boxShadow: "0 0 15px rgba(0, 0, 0, 0.3)",
     textAlign: "center",
-    width: "400px",
+    width: "350px",
     animation: "fadeIn 0.5s ease-in-out",
     border: "2px solid white",
   },
