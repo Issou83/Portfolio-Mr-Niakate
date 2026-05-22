@@ -183,6 +183,10 @@
   background: transparent;
   margin-top: 1.5rem;
 
+  @media screen and (max-width: 760px) {
+    margin-bottom: 5.8rem;
+  }
+
   a .button {
     display: inline-flex;
     align-items: center;
