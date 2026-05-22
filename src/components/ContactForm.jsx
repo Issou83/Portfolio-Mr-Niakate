@@ -22,7 +22,7 @@ const ContactForm = () => {
           console.log(res.text);
           form.current.reset();
           formMess.innerHTML =
-            "<p className='success'>Message envoyé ! <br>Je vous recontacte au plus vite</p>";
+            "<p class='success'>Message envoye ! <br>Je vous recontacte au plus vite</p>";
 
           setTimeout(() => {
             formMess.innerHTML = "";
@@ -31,7 +31,7 @@ const ContactForm = () => {
         (err) => {
           console.log(err.text);
           formMess.innerHTML =
-            "<p className='error'>Une erreur s'est produite, veuillez réessayer</p>";
+            "<p class='error'>Une erreur s'est produite, veuillez reessayer</p>";
 
           setTimeout(() => {
             formMess.innerHTML = "";
@@ -42,20 +42,20 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <h2>Contactez moi</h2>
+      <h2>Votre projet</h2>
       <form ref={form} onSubmit={sendEmail} className="form-content">
-        <label>Nom</label>
-        <input type="text" name="name" required autoComplete="off" id="name" />
-        <label>Email</label>
+        <label htmlFor="name">Nom</label>
+        <input type="text" name="name" required autoComplete="name" id="name" />
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
           required
-          autoComplete="off"
+          autoComplete="email"
           id="email"
         />
-        <label>Décrivez votre projet</label>
-        <textarea name="message" id="mess" />
+        <label htmlFor="mess">Objectif, delai, budget ou besoin principal</label>
+        <textarea name="message" id="mess" required />
         <input type="submit" value="Envoyer" className="hover button" />
       </form>
       <div className="formMessage"></div>

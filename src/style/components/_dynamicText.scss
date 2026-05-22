@@ -1,7 +1,7 @@
 .dynamic-text {
   position: relative;
   display: flex;
-  font-size: 50px;
+  font-size: inherit;
 
   @media screen and (max-width: 768px) {
     font-size: 18px;
@@ -9,7 +9,9 @@
 
   #text-target {
     display: flex;
-    width: 300px;
+    width: min(45vw, 250px);
+    height: 1.2em;
+    overflow: hidden;
     text-align: left;
     animation: color 0.75s alternate infinite;
     perspective: 200px;
@@ -34,11 +36,15 @@
 
 .word {
   animation: wordEntry 1s ease-out;
+
+  @media screen and (max-width: 560px) {
+    animation: wordEntryMobile 0.45s ease-out;
+  }
 }
 
 @keyframes wordEntry {
   0% {
-    transform: translateY(-200px);
+    transform: translateY(-120%);
     opacity: 0;
     color: #ffffff;
   }
@@ -48,13 +54,24 @@
     color: #ff0000;
   }
   50% {
-    transform: translateY(-50px);
+    transform: translateY(-35%);
     opacity: 1;
     color: #059b00;
   }
 
   100% {
     transform: translateY(0);
+    opacity: 1;
+    color: #059b00;
+  }
+}
+
+@keyframes wordEntryMobile {
+  0% {
+    opacity: 0;
+    color: #ffffff;
+  }
+  100% {
     opacity: 1;
     color: #059b00;
   }

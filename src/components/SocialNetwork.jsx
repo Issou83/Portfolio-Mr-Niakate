@@ -18,51 +18,32 @@ const SocialNetwork = () => {
   };
 
   return (
-    // <a href={currentProject.gitlink}  className="linkGit" target="_blank" rel="noopener noreferrer">
-    // <span className='git'></span>
-    // </a>
     <div className="social-network">
-      <ul className="content">
-        <a
-          href="https://github.com/Issou83"
-          taget="_blank"
-          rel="noopener noreferrer"
-          className="hover"
-          onMouseOver={anim}
-        >
-          <li>
-            <img className="linkGit" src={logogit} alt="Logo Github"></img>
-          </li>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/issouma%C3%AFla-niakate-60333464/"
-          taget="_blank"
-          rel="noopener noreferrer"
-          className="hover"
-          onMouseOver={anim}
-        >
-          <li>
-            <img className="linkGit" src={linkedin} alt="Logo Linkedin"></img>
-          </li>
-        </a>
-        {/* <a href="https://www.twitter.com" 
-                taget="_blank" 
-                rel="noopener noreferrer" 
-                className='hover'
-                onMouseOver={anim}>
+      <ul className="content" aria-label="Liens sociaux">
         <li>
-            <i className='fab fa-twitter'></i>
+          <a
+            href="https://github.com/Issou83"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover"
+            onMouseOver={anim}
+            aria-label="Profil Github de NKT.DevWeb"
+          >
+            <img className="linkGit" src={logogit} alt="" />
+          </a>
         </li>
-                </a> */}
-        {/* <a href="https://www.instagram.com" 
-                taget="_blank" rel="noopener noreferrer" 
-                className='hover'
-                onMouseOver={anim}>
         <li>
-            <i className='fab fa-instagram'></i>
+          <a
+            href="https://www.linkedin.com/in/issouma%C3%AFla-niakate-60333464/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover"
+            onMouseOver={anim}
+            aria-label="Profil LinkedIn de NKT.DevWeb"
+          >
+            <img className="linkGit" src={linkedin} alt="" />
+          </a>
         </li>
-                </a> */}
       </ul>
     </div>
   );

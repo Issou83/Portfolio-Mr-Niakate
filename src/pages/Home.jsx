@@ -7,35 +7,66 @@ import SocialNetwork from "../components/SocialNetwork";
 import { motion } from "framer-motion";
 import ButtonContact from "../components/ButtonContact";
 import ConsentBanner from "../components/ConsentBanner";
-
-// import Html from "../assets/fonts/img/HTML5_logo.svg";
-// import Css from "../assets/fonts/img/CSS3.svg";
-// import Js from "../assets/fonts/img/JavaScript_logo.svg";
-// import Sass from "../assets/fonts/img/Sass_Logo.svg";
-// import ReacT from "../assets/fonts/img/React-icon.svg";
-// import Node from "../assets/fonts/img/Node.js_logo.svg";
 import Logo from "../components/Logo";
 
 const Home = () => {
+  const services = [
+    {
+      title: "Sites vitrines qui convertissent",
+      text: "Une presence claire, rapide et credible pour transformer vos visiteurs en demandes de devis.",
+    },
+    {
+      title: "Applications web metier",
+      text: "Des outils sur mesure pour simplifier vos process, gerer vos donnees et gagner du temps.",
+    },
+    {
+      title: "Refonte & performance",
+      text: "Audit UX, design, vitesse et parcours utilisateur pour repartir sur une base solide.",
+    },
+  ];
+
+  const advantages = [
+    "Diagnostic UX offert",
+    "Interlocuteur unique",
+    "Design sur mesure",
+    "Site rapide et responsive",
+  ];
+
+  const offers = [
+    {
+      name: "Presence",
+      forWho: "Artisan, independant, jeune activite",
+      items: ["Site vitrine clair", "Parcours contact", "Base SEO locale"],
+    },
+    {
+      name: "Croissance",
+      forWho: "TPE/PME qui veut plus de demandes",
+      items: ["Refonte UX", "Pages services", "Optimisation conversion"],
+    },
+    {
+      name: "Metier",
+      forWho: "Entreprise avec besoins specifiques",
+      items: ["Application web", "API & donnees", "Interface d'administration"],
+    },
+  ];
+
+  const process = [
+    "Audit de l'existant",
+    "Prototype UX",
+    "Developpement",
+    "Mise en ligne",
+  ];
+
   return (
     <div className="homeContainer">
       <ConsentBanner />
-
       <Mouse />
-      <div className="home">
+
+      <section className="home agency-hero" id="accueil">
         <Navigation />
         <div className="myLogo">
           <Logo />
         </div>
-
-        {/* <div className="logos">
-          <img src={Html} alt="logo html" className="logoTechnos" />
-          <img src={Css} alt="Logo css" className="logoTechnos" />
-          <img src={Sass} alt="logo sass" className="logoTechnos" />
-          <img src={Js} alt="Logo Javascript" className="logoTechnos" />
-          <img src={ReacT} alt="Logo react" className="logoTechnos" />
-          <img src={Node} alt="Logo Node.js" className="logoTechnos" />
-        </div> */}
         <SocialNetwork />
 
         <div className="home-main">
@@ -68,23 +99,120 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <div className="hero-copy">
+          <p className="eyebrow">Agence web dans le 64</p>
+          <h1>
+            Des sites web sur mesure pour les artisans, entrepreneurs et PME
+            qui veulent etre choisis.
+          </h1>
+          <p>
+            NKT.DevWeb concoit des experiences digitales rapides, lisibles et
+            pensees pour vos objectifs : gagner en visibilite, rassurer vos
+            clients et generer plus de contacts.
+          </p>
+          <div className="hero-actions">
+            <ButtonContact />
+            <a className="secondary-link" href="#services">
+              Voir les offres
+            </a>
+          </div>
+          <ul className="hero-trust">
+            {advantages.map((advantage) => (
+              <li key={advantage}>{advantage}</li>
+            ))}
+          </ul>
+        </div>
+
         <Buttons right={"/projet-1"} />
-      </div>
-      <div className="titleHome">
-        <h1>
-          Développement Web sur mesure, au pixel près. Basé dans les
-          Pyrénées-Atlantiques (64).{" "}
-        </h1>
-      </div>
-      <p className="phraseAccroche">
-        Bienvenue chez NKT.DevWeb, votre expert en solutions web. Je vous
-        accompagne durant tout votre projet, que vous soyez artisan,
-        collectivité ou encore une entreprise. Faites moi part de votre projet
-        Web. Rendez votre activité visible et communiquez vos evenements à tous.
-      </p>
-      <div className="buttonContactContainer">
+      </section>
+
+      <section className="agency-section difference-section">
+        <p className="section-kicker">Pourquoi NKT.DevWeb</p>
+        <h2>La proximite d'un freelance, la structure d'une agence.</h2>
+        <div className="difference-grid">
+          <article>
+            <strong>Pau, Gan, Bearn et Nouvelle-Aquitaine</strong>
+            <p>
+              Un accompagnement local pour les entreprises qui veulent une
+              presence web serieuse sans perdre du temps dans le jargon.
+            </p>
+          </article>
+          <article>
+            <strong>Pas un template de plus</strong>
+            <p>
+              L'identite visuelle reste memorisable, mais chaque page sert un
+              objectif concret : comprendre, rassurer, contacter.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="agency-section agency-intro" id="services">
+        <p className="section-kicker">Ce que l'on construit</p>
+        <h2>Une base web solide, utile et belle.</h2>
+        <div className="service-grid">
+          {services.map((service) => (
+            <article className="service-card" key={service.title}>
+              <span></span>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="agency-section offers-section">
+        <p className="section-kicker">Offres lisibles</p>
+        <h2>Un cadre simple, adapte a votre maturite digitale.</h2>
+        <div className="offers-grid">
+          {offers.map((offer) => (
+            <article key={offer.name}>
+              <small>{offer.forWho}</small>
+              <h3>{offer.name}</h3>
+              <ul>
+                {offer.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="agency-section agency-proof">
+        <div>
+          <p className="section-kicker">Pour petites equipes ambitieuses</p>
+          <h2>Un accompagnement proche, sans langage inutile.</h2>
+        </div>
+        <div className="proof-list">
+          <p>Audit avant design pour comprendre vos vrais freins.</p>
+          <p>Parcours de contact raccourci pour faciliter la prise de decision.</p>
+          <p>Design responsive pense pour mobile, tablette et bureau.</p>
+        </div>
+      </section>
+
+      <section className="agency-section process-section">
+        <p className="section-kicker">Methode</p>
+        <h2>Un projet avance etape par etape.</h2>
+        <div className="process-grid">
+          {process.map((step, index) => (
+            <article key={step}>
+              <small>0{index + 1}</small>
+              <h3>{step}</h3>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="agency-section final-cta">
+        <p className="section-kicker">Pret a clarifier votre presence web ?</p>
+        <h2>
+          On transforme votre idee en site professionnel, visible et agreable a
+          utiliser.
+        </h2>
         <ButtonContact />
-      </div>
+      </section>
     </div>
   );
 };

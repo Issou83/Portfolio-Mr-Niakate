@@ -4,10 +4,8 @@ import Navigation from "../components/Navigation";
 import Logo from "../components/Logo";
 import ContactForm from "../components/ContactForm";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-// import SocialNetwork from "../components/SocialNetwork";
 import Buttons from "../components/Buttons";
 import ConsentBanner from "../components/ConsentBanner";
-
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -37,7 +35,17 @@ const Contact = () => {
       >
         <Navigation />
         <Logo />
-        <ContactForm />
+        <section className="contact-layout">
+          <div className="contact-intro">
+            <p className="section-kicker">Demarrage projet</p>
+            <h1>Parlez-moi de votre objectif, je vous reponds avec une piste claire.</h1>
+            <p>
+              Site vitrine, refonte, application web ou besoin de visibilite :
+              envoyez les grandes lignes et nous cadrons la suite simplement.
+            </p>
+          </div>
+          <ContactForm />
+        </section>
         <div className="contact-infos">
           <div className="address">
             <div className="content">
@@ -69,20 +77,19 @@ const Contact = () => {
                 <p
                   style={{ cursor: "pointer" }}
                   className="clipboard"
-                  onClick={() => alert("E-mail copié !")}
+                  onClick={() => alert("E-mail copie !")}
                 >
                   issou8@gmail.com
                 </p>
               </CopyToClipboard>
             </div>
           </div>
-          {/* <SocialNetwork /> */}
 
           <div className="credits">
-            <p>Niakate I - 2023</p>
+            <p>NKT.DevWeb - 2026</p>
           </div>
         </div>
-        <Buttons left={"/projet-4"} />
+        <Buttons left={"/projet-7"} />
       </motion.div>
     </main>
   );

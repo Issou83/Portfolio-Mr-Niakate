@@ -3,34 +3,41 @@ import React, { useEffect } from "react";
 const DynamiqueText = () => {
   useEffect(() => {
     const target = document.getElementById("text-target");
-
-    let array = ["Site vitrine", "DATA", "E-Commerce", "APP Web"];
+    const words = ["Site vitrine", "DATA", "E-Commerce", "APP Web"];
     let wordIndex = 0;
 
-    const createWord = () => {
-      // Supprimer le contenu précédent
+    const createWord = (animate = true) => {
+      if (!target) return;
       target.innerHTML = "";
 
       const word = document.createElement("span");
       target.appendChild(word);
 
-      word.classList.add("word");
-      word.textContent = array[wordIndex];
-
-      // Incrémenter wordIndex pour passer au mot suivant
-      wordIndex = (wordIndex + 1) % array.length;
+      if (animate) {
+        word.classList.add("word");
+      }
+      word.textContent = words[wordIndex];
+      wordIndex = (wordIndex + 1) % words.length;
     };
 
-    // Changer le mot toutes les 2 secondes
-    setInterval(createWord, 2000);
+    createWord(false);
+    const startInterval = setTimeout(() => {
+      createWord();
+      var interval = setInterval(createWord, 2000);
+      target.dataset.interval = interval;
+    }, 1200);
 
-    // Initialiser avec le premier mot
-    createWord();
+    return () => {
+      clearTimeout(startInterval);
+      if (target?.dataset.interval) {
+        clearInterval(Number(target.dataset.interval));
+      }
+    };
   }, []);
 
   return (
     <span className="dynamic-text">
-      <span>Création</span>
+      <span>Creation</span>
       <span id="text-target"></span>
     </span>
   );

@@ -85,6 +85,7 @@ const Project = ({ projectNumber }) => {
           <span>
             <h3>{currentProject.title}</h3>
             <p>{currentProject.infos}</p>
+            <strong>{currentProject.result}</strong>
           </span>
           <img
             src={currentProject.img}
@@ -98,12 +99,12 @@ const Project = ({ projectNumber }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="button">Voir le Projet</span>
+            <span className="button">Voir le projet</span>
           </a>
 
           <a
             href={currentProject.gitlink}
-            taget="_blank"
+            target="_blank"
             rel="noopener noreferrer"
             className="gitCode"
           >
@@ -112,7 +113,7 @@ const Project = ({ projectNumber }) => {
               src={logogit}
               alt="Lien Github du Projet"
             ></img>
-            <p>Voir le Code :</p>
+            <p>Voir le code</p>
           </a>
         </div>
       </motion.div>

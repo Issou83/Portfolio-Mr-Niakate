@@ -1,73 +1,71 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+
+const projects = [
+  ["Site vitrine pro", "/projet-1"],
+  ["Location", "/projet-2"],
+  ["E-commerce", "/projet-3"],
+  ["SEO", "/projet-4"],
+  ["Vitrine", "/projet-5"],
+  ["Restauration", "/projet-6"],
+  ["API & donnees", "/projet-7"],
+];
+
+const activeClass = (nav) => (nav.isActive ? "nav-active hover" : "hover");
 
 const Navigation = () => {
-  return (
-    <div className="navigation">
-      <ul>
-        <NavLink
-          to="/"
-          className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-        >
-          <li>Accueil</li>
-        </NavLink>
+  const [projectsOpen, setProjectsOpen] = useState(false);
+  const location = useLocation();
+  const isProject = location.pathname.startsWith("/projet-");
 
-        <li className="nav-portfolio">
-          Portfolio
-          <ul className="nav-projects">
-            <NavLink
-              to="/projet-1"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀Site vitrine (+)</li>
-            </NavLink>
-            <NavLink
-              to="/projet-2"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀Locations de Logements</li>
-            </NavLink>
-            <NavLink
-              to="/projet-3"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀E-commerce</li>
-            </NavLink>
-            <NavLink
-              to="/projet-4"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀Référencement et SEO</li>
-            </NavLink>
-            <NavLink
-              to="/projet-5"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀Site vitrine</li>
-            </NavLink>
-            <NavLink
-              to="/projet-6"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀Site pour la réstauration</li>
-            </NavLink>
-            <NavLink
-              to="/projet-7"
-              className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-            >
-              <li>🚀API et base de données</li>
-            </NavLink>
+  useEffect(() => {
+    setProjectsOpen(false);
+  }, [location.pathname]);
+
+  return (
+    <nav
+      className={`navigation ${projectsOpen ? "projects-open" : ""}`}
+      aria-label="Navigation principale"
+    >
+      <div className="nav-orbit" aria-hidden="true"></div>
+      <ul className="nav-list">
+        <li>
+          <NavLink to="/" end className={activeClass}>
+            <span>Accueil</span>
+          </NavLink>
+        </li>
+        <li>
+          <a className="hover" href="/#services">
+            <span>Offres</span>
+          </a>
+        </li>
+        <li className="nav-projects-item">
+          <button
+            type="button"
+            className={`hover project-trigger ${isProject ? "nav-active" : ""}`}
+            aria-expanded={projectsOpen}
+            aria-controls="project-panel"
+            onClick={() => setProjectsOpen((open) => !open)}
+          >
+            <span>Projets</span>
+          </button>
+          <ul className="nav-projects" id="project-panel" aria-label="Projets">
+            {projects.map(([label, path]) => (
+              <li key={path}>
+                <NavLink to={path} className={activeClass}>
+                  {label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </li>
-
-        <NavLink
-          to="/contact"
-          className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-        >
-          <li>Contact</li>
-        </NavLink>
+        <li>
+          <NavLink to="/contact" className={activeClass}>
+            <span>Contact</span>
+          </NavLink>
+        </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

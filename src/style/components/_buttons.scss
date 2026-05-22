@@ -1,29 +1,30 @@
 .scroll-bottom {
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+
   a {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 400px;
-    font-size: 6rem;
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: clamp(3rem, 8vw, 5.8rem);
     color: rgb(0, 255, 0);
     transition: 0.25s;
     user-select: none;
     padding: 0 14px;
+    z-index: 45;
+    animation: jumpArrow 3s ease-in-out infinite;
 
-    @media screen and (max-width: 768px) {
-      top: 400px;
-    }
-    @media screen and (max-width: 620px) {
-      top: 510px;
-    }
-    @media screen and (max-width: 440px) {
-      top: 595px;
+    @media screen and (max-width: 700px) {
+      top: auto;
+      bottom: 1.2rem;
+      font-size: 3.5rem;
     }
 
     &:hover {
-      font-size: 6.8rem;
       color: rgb(251, 255, 0);
+      transform: translateY(-50%) scale(1.08);
     }
-    animation: jumpArrow 3s ease-in-out infinite;
 
     @keyframes jumpArrow {
       0% {
@@ -39,16 +40,10 @@
   }
 
   .left {
-    left: 24px;
-    @media screen and (max-width: 768px) {
-      left: 30px;
-    }
+    left: 0.4rem;
   }
 
   .right {
-    right: -30px;
-    @media screen and (max-width: 768px) {
-      right: -25px;
-    }
+    right: 0.4rem;
   }
 }

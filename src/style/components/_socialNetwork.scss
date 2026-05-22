@@ -1,10 +1,8 @@
 .social-network {
   position: absolute;
-  right: 0;
-  top: 0;
-  // width: auto;
-  // height: auto;
-  // font-size: 1.2rem;
+  right: clamp(7rem, 13vw, 12rem);
+  top: 1rem;
+  z-index: 20;
 
   @media screen and (max-width: 650px) {
     width: 30%;
@@ -12,6 +10,7 @@
 
   ul {
     display: flex;
+    gap: 0.5rem;
     width: 100%;
     min-width: 100px;
     justify-content: space-around;
@@ -21,7 +20,7 @@
     }
 
     a {
-      padding: 1rem;
+      padding: 0.85rem;
       transition: 1.1s ease-out;
     }
 

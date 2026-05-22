@@ -3,14 +3,23 @@
   height: 62px;
   border: 1px solid $color-2;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: 500ms ease-out;
-  z-index: 2;
-  backdrop-filter: brightness(115%);
+  z-index: 9999;
+  opacity: 0;
 }
 .cursor.hovered {
   width: 30px;
   height: 30px;
+}
+.cursor.active {
+  opacity: 1;
+}
+
+@media (pointer: coarse), screen and (max-width: 700px) {
+  .cursor {
+    display: none;
+  }
 }

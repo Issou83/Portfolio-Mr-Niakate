@@ -1,119 +1,201 @@
 .navigation {
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 80;
+  color: $color-4;
+}
+
+.nav-orbit {
   position: absolute;
-  width: 130px;
-  height: 130px;
-  top: 1rem;
-  left: 1rem;
-  padding: 20px;
-  font-size: 18px;
-  line-height: 22px;
-  color: rgb(255, 109, 122);
-  background: rgb(0, 0, 0);
-  border-radius: 50%;
-  // border: 2px solid white;
+  inset: -3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #fdcd3b, #00c1ec, #ff0055, #00ff66);
+  opacity: 0.75;
+  filter: blur(7px);
+  z-index: -1;
+}
 
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-    top: 10px;
-  }
-  @media screen and (max-width: 680px) {
-    // font-size: 22px;
-    // top: 10px;
-    // line-height: 20px;
-  }
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(0, 193, 236, 0.38);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.86);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(12px);
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: calc(100% + 5px);
-    width: calc(100% + 5px);
-    top: -3px;
-    left: -3px;
-    // border: 2px solid white;
-    border-radius: 50%;
-    background: linear-gradient(#fdcd3b 1%, #000000 1%);
-    // filter: blur(5px);
-    z-index: -3;
-
-    animation: circlA 2s linear infinite;
-
-    @keyframes circlA {
-      0% {
-        rotate: 0;
-        // background-position: 0 0;
-      }
-      50% {
-        rotate: 180deg;
-        // background-position: 600% 0;
-        // background-position-x:  0 3000%;
-      }
-
-      100% {
-        rotate: 360deg;
-        // background-position: 0 0;
-      }
-    }
-  }
-  .nav-active {
-    color: white;
-  }
-  ul:hover li:not(:hover) {
-    opacity: 0.5;
-  }
-  ul:hover li:hover {
-    color: rgb(255, 255, 255);
-  }
-
-  .nav-portfolio {
+  a,
+  button {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 999px;
+    color: $color-4;
+    background: transparent;
+    font-family: $font-1;
+    font-size: 0.98rem;
     cursor: pointer;
-    display: flex;
-    // padding-right: 6rem;
-    transition: 1s;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  }
 
-    &:hover .nav-projects,
-    .nav-projects:hover {
-      visibility: visible;
-      opacity: 1;
-
-      li {
-        transform: rotatey(0deg);
-      }
-    }
-
-    .nav-projects {
-      position: absolute;
-      visibility: hidden;
-      left: 23px;
-      opacity: 0;
-      padding: 0 30px;
-      width: 350px;
-      transform: translateX(0px);
-      transition: 0.3s;
-      perspective: 500px;
-      background: rgb(0, 0, 0);
-      border: 1px rgb(255, 234, 2) solid;
-      border-radius: 10px;
-      z-index: 30;
-      list-style-type: circle;
-      @media screen and (max-width: 430px) {
-        // padding: 0 5px;
-        // height: 110px;
-        // width: 100%;
-        left: 0px;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-      }
-
-      li {
-        transform: rotatey(30deg) scaleX(1.2);
-        transform-origin: center;
-        transition: 0.9s;
-      }
-    }
+  a:hover,
+  button:hover,
+  .nav-active {
+    color: #ffffff;
+    background: rgba(0, 193, 236, 0.12);
   }
 }
+
+.nav-projects-item {
+  position: relative;
+
+  &:hover .nav-projects,
+  &:focus-within .nav-projects {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.project-trigger {
+  border: none;
+
+  &::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    margin-left: 0.55rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+}
+
+.projects-open .project-trigger::after,
+.nav-projects-item:hover .project-trigger::after,
+.nav-projects-item:focus-within .project-trigger::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.nav-projects {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  width: 280px;
+  padding: 0.7rem;
+  border: 1px solid rgba(255, 234, 2, 0.55);
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(0, 193, 236, 0.12), transparent 55%),
+    rgba(0, 0, 0, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+
+  li + li {
+    margin-top: 0.2rem;
+  }
+
+  a {
+    width: 100%;
+    justify-content: flex-start;
+    min-height: 38px;
+    border-radius: 7px;
+    padding: 0 0.75rem;
+  }
+}
+
+.projects-open .nav-projects {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
 .linkGit {
   width: 55px;
   height: 55px;
+}
+
+@media screen and (max-width: 760px) {
+  .navigation {
+    top: auto;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.85rem;
+    transform: none;
+  }
+
+  .nav-orbit {
+    inset: -2px;
+    border-radius: 16px;
+    filter: blur(5px);
+  }
+
+  .nav-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.25rem;
+    padding: 0.35rem;
+    border-radius: 14px;
+  }
+
+  .nav-list a,
+  .nav-list button {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 0.25rem;
+    border-radius: 10px;
+    font-size: 0.82rem;
+  }
+
+  .project-trigger::after {
+    display: none;
+  }
+
+  .nav-projects {
+    position: fixed;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 5.6rem;
+    top: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+    transform: translateY(10px);
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-projects-item:hover .nav-projects,
+  .nav-projects-item:focus-within .nav-projects {
+    transform: translateY(10px);
+  }
+
+  .projects-open .nav-projects {
+    transform: translateY(0);
+  }
+
+  .nav-projects li + li {
+    margin-top: 0;
+  }
+
+  .nav-projects a {
+    min-height: 42px;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.1;
+  }
 }
