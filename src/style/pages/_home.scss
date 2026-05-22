@@ -290,6 +290,48 @@
   }
 }
 
+.local-links,
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.local-links a,
+.faq-grid article {
+  padding: 1.2rem;
+  border: 1px solid rgba(0, 193, 236, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.local-links a {
+  color: $color-3;
+  font-family: $font-2;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: $color-2;
+  }
+}
+
+.faq-grid h3 {
+  color: $color-3;
+  font-family: $font-2;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.faq-grid p {
+  color: $color-4;
+  line-height: 1.55;
+}
+
 .difference-grid article,
 .offers-grid article {
   min-height: 180px;

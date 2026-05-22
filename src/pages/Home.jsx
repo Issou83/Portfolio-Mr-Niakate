@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import ButtonContact from "../components/ButtonContact";
 import ConsentBanner from "../components/ConsentBanner";
 import Logo from "../components/Logo";
+import SEO from "../components/SEO";
+import { homeJsonLd } from "../data/seoData";
 
 const Home = () => {
   const services = [
@@ -59,6 +61,12 @@ const Home = () => {
 
   return (
     <div className="homeContainer">
+      <SEO
+        title="NKT.DevWeb - Agence web a Gan et Pau pour artisans, TPE et PME"
+        description="Creation de sites vitrines, applications web et solutions e-commerce pour artisans, entrepreneurs, TPE et PME a Gan, Pau, dans le Bearn et en Nouvelle-Aquitaine."
+        path="/"
+        jsonLd={homeJsonLd}
+      />
       <ConsentBanner />
       <Mouse />
 
@@ -202,6 +210,45 @@ const Home = () => {
               <h3>{step}</h3>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="agency-section local-seo-section">
+        <p className="section-kicker">Zones accompagnees</p>
+        <h2>Une presence locale claire pour etre trouve au bon moment.</h2>
+        <div className="local-links">
+          <a href="/creation-site-internet-pau">Creation site internet Pau</a>
+          <a href="/creation-site-internet-gan">Creation site internet Gan</a>
+          <a href="/creation-site-web-bearn">Creation site web Bearn</a>
+        </div>
+      </section>
+
+      <section className="agency-section faq-section">
+        <p className="section-kicker">Questions frequentes</p>
+        <h2>Les bonnes questions avant de lancer votre site.</h2>
+        <div className="faq-grid">
+          <article>
+            <h3>Combien coute un site internet professionnel ?</h3>
+            <p>
+              Le prix depend du nombre de pages, du contenu, des fonctionnalites
+              et du niveau d'accompagnement. Le cadrage evite de payer des
+              options inutiles.
+            </p>
+          </article>
+          <article>
+            <h3>Un site vitrine peut-il vraiment generer des contacts ?</h3>
+            <p>
+              Oui, si l'offre est claire, les preuves visibles, la vitesse bonne
+              et le parcours de contact simple, surtout sur mobile.
+            </p>
+          </article>
+          <article>
+            <h3>Pourquoi travailler le SEO local des le debut ?</h3>
+            <p>
+              Les signaux locaux, la coherence des informations et les pages de
+              services aident Google a comprendre votre zone et vos expertises.
+            </p>
+          </article>
         </div>
       </section>
 

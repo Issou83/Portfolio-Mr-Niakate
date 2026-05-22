@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { projectsData } from "../data/projectsData";
 import { motion } from "framer-motion";
 import logogit from "../assets/fonts/img/github.png";
+import SEO, { siteUrl } from "./SEO";
 
 const Project = ({ projectNumber }) => {
   const [currentProject] = useState(projectsData[projectNumber]);
@@ -59,6 +60,12 @@ const Project = ({ projectNumber }) => {
       transition={transition}
       variants={variants}
     >
+      <SEO
+        title={`${currentProject.title} - Realisation web NKT.DevWeb`}
+        description={`${currentProject.title} par NKT.DevWeb : ${currentProject.result}`}
+        path={`/projet-${projectNumber + 1}`}
+        image={`${siteUrl}/${currentProject.img.replace("./", "")}`}
+      />
       <div className="project-content">
         <div className="container-circle">
           <span

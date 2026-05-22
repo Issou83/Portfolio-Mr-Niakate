@@ -7,6 +7,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Buttons from "../components/Buttons";
 import ConsentBanner from "../components/ConsentBanner";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   const pageTransition = {
@@ -22,6 +23,11 @@ const Contact = () => {
 
   return (
     <main>
+      <SEO
+        title="Contact NKT.DevWeb - Devis site internet a Gan et Pau"
+        description="Contactez NKT.DevWeb pour un site vitrine, une refonte, une application web ou un projet SEO local a Gan, Pau et dans le Bearn."
+        path="/contact"
+      />
       <Mouse />
       <ConsentBanner />
 

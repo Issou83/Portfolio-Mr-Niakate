@@ -10,6 +10,7 @@ import Project6 from './pages/Project6';
 import Project7 from './pages/Project7';
 import Contact from './pages/contact';
 import NotFound from './pages/NotFound';
+import LocalLanding from './pages/LocalLanding';
 import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
@@ -25,6 +26,9 @@ const App = () => {
       <Route path='/projet-5' element={<Project5 />} />
       <Route path='/projet-6' element={<Project6 />} />
       <Route path='/projet-7' element={<Project7 />} />
+      <Route path='/creation-site-internet-pau' element={<LocalLanding area="pau" />} />
+      <Route path='/creation-site-internet-gan' element={<LocalLanding area="gan" />} />
+      <Route path='/creation-site-web-bearn' element={<LocalLanding area="bearn" />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/*' element={<NotFound />} />
     </Routes>
