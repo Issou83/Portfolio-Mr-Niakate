@@ -175,6 +175,18 @@
       }
     }
   }
+
+  @media screen and (max-width: 360px) {
+    .main-content {
+      h2 {
+        font-size: 1.68rem;
+      }
+
+      h3 {
+        font-size: 0.98rem;
+      }
+    }
+  }
 }
 
 .hero-copy {
@@ -263,8 +275,16 @@
 
 .agency-section {
   width: min(1120px, calc(100% - 3rem));
+  max-width: calc(100vw - 3rem);
   margin: 0 auto;
   padding: clamp(4rem, 8vw, 7rem) 0;
+
+  @media screen and (max-width: 560px) {
+    width: auto;
+    max-width: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 
   h2 {
     font-family: $font-2;
@@ -272,6 +292,7 @@
     line-height: 1.1;
     max-width: 780px;
     margin: 0.8rem 0 2rem;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -485,6 +506,10 @@
 
   h2 {
     max-width: 900px;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: auto;
   }
 }
 
