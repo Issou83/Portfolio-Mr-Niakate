@@ -140,8 +140,11 @@ const ServiceLanding = ({ service }) => {
           <NavLink to="/contact" className="buttonContact hover">
             Demander un devis
           </NavLink>
-          <NavLink to="/creation-site-internet-pau" className="secondary-link">
-            Voir le SEO local
+          <NavLink
+            to={service === "seo" ? "/creation-site-internet-pau" : "/seo-local-pau"}
+            className="secondary-link"
+          >
+            {service === "seo" ? "Voir les pages locales" : "Voir le SEO local"}
           </NavLink>
         </div>
       </section>
