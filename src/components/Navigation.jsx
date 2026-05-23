@@ -8,7 +8,7 @@ const projects = [
   ["SEO", "/projet-4"],
   ["Vitrine", "/projet-5"],
   ["Restauration", "/projet-6"],
-  ["API & donnees", "/projet-7"],
+  ["API & données", "/projet-7"],
 ];
 
 const activeClass = (nav) => (nav.isActive ? "nav-active hover" : "hover");

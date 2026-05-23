@@ -61,7 +61,7 @@ const Project = ({ projectNumber }) => {
       variants={variants}
     >
       <SEO
-        title={`${currentProject.title} - Realisation web NKT.DevWeb`}
+        title={`${currentProject.title} - Réalisation web NKT.DevWeb`}
         description={`${currentProject.title} par NKT.DevWeb : ${currentProject.result}`}
         path={`/projet-${projectNumber + 1}`}
         image={`${siteUrl}/${currentProject.img.replace("./", "")}`}
@@ -118,7 +118,7 @@ const Project = ({ projectNumber }) => {
             <img
               className="linkGit"
               src={logogit}
-              alt="Lien Github du Projet"
+              alt="Lien GitHub du projet"
             ></img>
             <p>Voir le code</p>
           </a>

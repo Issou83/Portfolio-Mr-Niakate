@@ -24,13 +24,13 @@ const business = {
 };
 
 const services = [
-  "Creation de site vitrine",
-  "Creation de site internet a Pau",
+  "Création de site vitrine",
+  "Création de site internet à Pau",
   "Refonte de site web",
-  "Developpement d'application web",
-  "Creation e-commerce",
+  "Développement d'application web",
+  "Création e-commerce",
   "Optimisation SEO locale",
-  "API et base de donnees",
+  "API et base de données",
 ];
 
 export const organizationJsonLd = {
@@ -41,8 +41,8 @@ export const organizationJsonLd = {
   areaServed: [
     { "@type": "City", name: "Gan" },
     { "@type": "City", name: "Pau" },
-    { "@type": "AdministrativeArea", name: "Bearn" },
-    { "@type": "AdministrativeArea", name: "Pyrenees-Atlantiques" },
+    { "@type": "AdministrativeArea", name: "Béarn" },
+    { "@type": "AdministrativeArea", name: "Pyrénées-Atlantiques" },
     { "@type": "AdministrativeArea", name: "Nouvelle-Aquitaine" },
   ],
   serviceType: services,
@@ -74,10 +74,10 @@ export const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Combien coute la creation d'un site internet pour une TPE ou un artisan ?",
+      name: "Combien coûte la création d'un site internet pour une TPE ou un artisan ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Le budget depend du nombre de pages, du contenu, des fonctionnalites et du niveau d'accompagnement. NKT.DevWeb commence par cadrer le besoin pour proposer un devis adapte et eviter les options inutiles.",
+        text: "Le budget dépend du nombre de pages, du contenu, des fonctionnalités et du niveau d'accompagnement. NKT.DevWeb commence par cadrer le besoin pour proposer un devis adapté et éviter les options inutiles.",
       },
     },
     {
@@ -85,12 +85,12 @@ export const faqJsonLd = {
       name: "Travaillez-vous avec des entreprises autour de Pau et Gan ?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Oui. NKT.DevWeb accompagne les artisans, entrepreneurs, TPE et PME a Gan, Pau, dans le Bearn, les Pyrenees-Atlantiques et plus largement en Nouvelle-Aquitaine.",
+        text: "Oui. NKT.DevWeb accompagne les artisans, entrepreneurs, TPE et PME à Gan, Pau, dans le Béarn, les Pyrénées-Atlantiques et plus largement en Nouvelle-Aquitaine.",
       },
     },
     {
       "@type": "Question",
-      name: "Pouvez-vous ameliorer un site existant plutot que le refaire ?",
+      name: "Pouvez-vous améliorer un site existant plutôt que le refaire ?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Oui. Un audit UX, technique et SEO permet d'identifier si une optimisation suffit ou si une refonte est plus pertinente pour obtenir plus de contacts.",
@@ -111,8 +111,8 @@ export const localPageJsonLd = ({ city, path }) => ({
     {
       "@type": "Service",
       "@id": `${siteUrl}${path}#service`,
-      name: `Creation de site internet a ${city}`,
-      serviceType: "Creation de site internet",
+      name: `Création de site internet à ${city}`,
+      serviceType: "Création de site internet",
       provider: { "@id": `${siteUrl}/#nktdevweb` },
       areaServed: { "@type": "City", name: city },
     },

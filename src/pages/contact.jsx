@@ -24,8 +24,8 @@ const Contact = () => {
   return (
     <main>
       <SEO
-        title="Contact NKT.DevWeb - Devis site internet a Gan et Pau"
-        description="Contactez NKT.DevWeb pour un site vitrine, une refonte, une application web ou un projet SEO local a Gan, Pau et dans le Bearn."
+        title="Contact NKT.DevWeb - Devis site internet à Gan et Pau"
+        description="Contactez NKT.DevWeb pour un site vitrine, une refonte, une application web ou un projet SEO local à Gan, Pau et dans le Béarn."
         path="/contact"
       />
       <Mouse />
@@ -43,10 +43,10 @@ const Contact = () => {
         <Logo />
         <section className="contact-layout">
           <div className="contact-intro">
-            <p className="section-kicker">Demarrage projet</p>
-            <h1>Parlez-moi de votre objectif, je vous reponds avec une piste claire.</h1>
+            <p className="section-kicker">Démarrage projet</p>
+            <h1>Parlez-moi de votre objectif, je vous réponds avec une piste claire.</h1>
             <p>
-              Site vitrine, refonte, application web ou besoin de visibilite :
+              Site vitrine, refonte, application web ou besoin de visibilité :
               envoyez les grandes lignes et nous cadrons la suite simplement.
             </p>
           </div>
@@ -78,12 +78,12 @@ const Contact = () => {
           </div>
           <div className="email">
             <div className="content">
-              <h4>Email</h4>
+              <h4>E-mail</h4>
               <CopyToClipboard text="issou8@gmail.com" className="hover">
                 <p
                   style={{ cursor: "pointer" }}
                   className="clipboard"
-                  onClick={() => alert("E-mail copie !")}
+                  onClick={() => alert("E-mail copié !")}
                 >
                   issou8@gmail.com
                 </p>

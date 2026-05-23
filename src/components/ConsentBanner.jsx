@@ -30,8 +30,8 @@ const ConsentPopup = () => {
   return (
     <aside className="consent-banner" aria-label="Gestion des cookies">
       <div>
-        <h2>Cookies et confidentialite</h2>
-        <p>Mesure d'audience et amelioration du site. Vous gardez le controle.</p>
+        <h2>Cookies et confidentialité</h2>
+        <p>Mesure d'audience et amélioration du site. Vous gardez le contrôle.</p>
       </div>
       <div className="consent-actions">
         <button onClick={() => handleConsent("granted")}>Accepter</button>

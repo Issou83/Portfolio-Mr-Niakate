@@ -15,11 +15,11 @@ const Home = () => {
   const services = [
     {
       title: "Sites vitrines qui convertissent",
-      text: "Une presence claire, rapide et credible pour transformer vos visiteurs en demandes de devis.",
+      text: "Une présence claire, rapide et crédible pour transformer vos visiteurs en demandes de devis.",
     },
     {
-      title: "Applications web metier",
-      text: "Des outils sur mesure pour simplifier vos process, gerer vos donnees et gagner du temps.",
+      title: "Applications web métier",
+      text: "Des outils sur mesure pour simplifier vos process, gérer vos données et gagner du temps.",
     },
     {
       title: "Refonte & performance",
@@ -36,8 +36,8 @@ const Home = () => {
 
   const offers = [
     {
-      name: "Presence",
-      forWho: "Artisan, independant, jeune activite",
+      name: "Présence",
+      forWho: "Artisan, indépendant, jeune activité",
       items: ["Site vitrine clair", "Parcours contact", "Base SEO locale"],
     },
     {
@@ -46,24 +46,24 @@ const Home = () => {
       items: ["Refonte UX", "Pages services", "Optimisation conversion"],
     },
     {
-      name: "Metier",
-      forWho: "Entreprise avec besoins specifiques",
-      items: ["Application web", "API & donnees", "Interface d'administration"],
+      name: "Métier",
+      forWho: "Entreprise avec besoins spécifiques",
+      items: ["Application web", "API & données", "Interface d'administration"],
     },
   ];
 
   const process = [
     "Audit de l'existant",
     "Prototype UX",
-    "Developpement",
+    "Développement",
     "Mise en ligne",
   ];
 
   return (
     <div className="homeContainer">
       <SEO
-        title="NKT.DevWeb - Agence web a Gan et Pau pour artisans, TPE et PME"
-        description="Creation de sites vitrines, applications web et solutions e-commerce pour artisans, entrepreneurs, TPE et PME a Gan, Pau, dans le Bearn et en Nouvelle-Aquitaine."
+        title="NKT.DevWeb - Agence web à Gan et Pau pour artisans, TPE et PME"
+        description="Création de sites vitrines, applications web et solutions e-commerce pour artisans, entrepreneurs, TPE et PME à Gan, Pau, dans le Béarn et en Nouvelle-Aquitaine."
         path="/"
         jsonLd={homeJsonLd}
       />
@@ -112,12 +112,12 @@ const Home = () => {
           <p className="eyebrow">Agence web dans le 64</p>
           <h1>
             Des sites web sur mesure pour les artisans, entrepreneurs et PME
-            qui veulent etre choisis.
+            qui veulent être choisis.
           </h1>
           <p>
-            NKT.DevWeb concoit des experiences digitales rapides, lisibles et
-            pensees pour vos objectifs : gagner en visibilite, rassurer vos
-            clients et generer plus de contacts.
+            NKT.DevWeb conçoit des expériences digitales rapides, lisibles et
+            pensées pour vos objectifs : gagner en visibilité, rassurer vos
+            clients et générer plus de contacts.
           </p>
           <div className="hero-actions">
             <ButtonContact />
@@ -137,19 +137,19 @@ const Home = () => {
 
       <section className="agency-section difference-section">
         <p className="section-kicker">Pourquoi NKT.DevWeb</p>
-        <h2>La proximite d'un freelance, la structure d'une agence.</h2>
+        <h2>La proximité d'un freelance, la structure d'une agence.</h2>
         <div className="difference-grid">
           <article>
-            <strong>Pau, Gan, Bearn et Nouvelle-Aquitaine</strong>
+            <strong>Pau, Gan, Béarn et Nouvelle-Aquitaine</strong>
             <p>
               Un accompagnement local pour les entreprises qui veulent une
-              presence web serieuse sans perdre du temps dans le jargon.
+              présence web sérieuse sans perdre du temps dans le jargon.
             </p>
           </article>
           <article>
             <strong>Pas un template de plus</strong>
             <p>
-              L'identite visuelle reste memorisable, mais chaque page sert un
+              L'identité visuelle reste mémorisable, mais chaque page sert un
               objectif concret : comprendre, rassurer, contacter.
             </p>
           </article>
@@ -184,7 +184,7 @@ const Home = () => {
 
       <section className="agency-section offers-section">
         <p className="section-kicker">Offres lisibles</p>
-        <h2>Un cadre simple, adapte a votre maturite digitale.</h2>
+        <h2>Un cadre simple, adapté à votre maturité digitale.</h2>
         <div className="offers-grid">
           {offers.map((offer) => (
             <article key={offer.name}>
@@ -202,31 +202,31 @@ const Home = () => {
 
       <section className="agency-section search-intent-section">
         <p className="section-kicker">Intentions de recherche</p>
-        <h2>Des pages concues pour les recherches qui amenent des clients.</h2>
+        <h2>Des pages conçues pour les recherches qui amènent des clients.</h2>
         <div className="intent-links">
-          <a href="/creation-site-vitrine">Creation site vitrine</a>
+          <a href="/creation-site-vitrine">Création site vitrine</a>
           <a href="/refonte-site-web">Refonte site web</a>
           <a href="/developpement-application-web">Application web sur mesure</a>
           <a href="/seo-local-pau">SEO local Pau</a>
-          <a href="/creation-site-ecommerce">Creation e-commerce</a>
+          <a href="/creation-site-ecommerce">Création e-commerce</a>
         </div>
       </section>
 
       <section className="agency-section agency-proof">
         <div>
-          <p className="section-kicker">Pour petites equipes ambitieuses</p>
+          <p className="section-kicker">Pour petites équipes ambitieuses</p>
           <h2>Un accompagnement proche, sans langage inutile.</h2>
         </div>
         <div className="proof-list">
           <p>Audit avant design pour comprendre vos vrais freins.</p>
-          <p>Parcours de contact raccourci pour faciliter la prise de decision.</p>
-          <p>Design responsive pense pour mobile, tablette et bureau.</p>
+          <p>Parcours de contact raccourci pour faciliter la prise de décision.</p>
+          <p>Design responsive pensé pour mobile, tablette et bureau.</p>
         </div>
       </section>
 
       <section className="agency-section process-section">
-        <p className="section-kicker">Methode</p>
-        <h2>Un projet avance etape par etape.</h2>
+        <p className="section-kicker">Méthode</p>
+        <h2>Un projet avance étape par étape.</h2>
         <div className="process-grid">
           {process.map((step, index) => (
             <article key={step}>
@@ -238,48 +238,48 @@ const Home = () => {
       </section>
 
       <section className="agency-section local-seo-section">
-        <p className="section-kicker">Zones accompagnees</p>
-        <h2>Une presence locale claire pour etre trouve au bon moment.</h2>
+        <p className="section-kicker">Zones accompagnées</p>
+        <h2>Une présence locale claire pour être trouvé au bon moment.</h2>
         <div className="local-links">
-          <a href="/creation-site-internet-pau">Creation site internet Pau</a>
-          <a href="/creation-site-internet-gan">Creation site internet Gan</a>
-          <a href="/creation-site-web-bearn">Creation site web Bearn</a>
+          <a href="/creation-site-internet-pau">Création site internet Pau</a>
+          <a href="/creation-site-internet-gan">Création site internet Gan</a>
+          <a href="/creation-site-web-bearn">Création site web Béarn</a>
         </div>
       </section>
 
       <section className="agency-section faq-section">
-        <p className="section-kicker">Questions frequentes</p>
+        <p className="section-kicker">Questions fréquentes</p>
         <h2>Les bonnes questions avant de lancer votre site.</h2>
         <div className="faq-grid">
           <article>
-            <h3>Combien coute un site internet professionnel ?</h3>
+            <h3>Combien coûte un site internet professionnel ?</h3>
             <p>
-              Le prix depend du nombre de pages, du contenu, des fonctionnalites
-              et du niveau d'accompagnement. Le cadrage evite de payer des
+              Le prix dépend du nombre de pages, du contenu, des fonctionnalités
+              et du niveau d'accompagnement. Le cadrage évite de payer des
               options inutiles.
             </p>
           </article>
           <article>
-            <h3>Un site vitrine peut-il vraiment generer des contacts ?</h3>
+            <h3>Un site vitrine peut-il vraiment générer des contacts ?</h3>
             <p>
               Oui, si l'offre est claire, les preuves visibles, la vitesse bonne
               et le parcours de contact simple, surtout sur mobile.
             </p>
           </article>
           <article>
-            <h3>Pourquoi travailler le SEO local des le debut ?</h3>
+            <h3>Pourquoi travailler le SEO local dès le début ?</h3>
             <p>
-              Les signaux locaux, la coherence des informations et les pages de
-              services aident Google a comprendre votre zone et vos expertises.
+              Les signaux locaux, la cohérence des informations et les pages de
+              services aident Google à comprendre votre zone et vos expertises.
             </p>
           </article>
         </div>
       </section>
 
       <section className="agency-section final-cta">
-        <p className="section-kicker">Pret a clarifier votre presence web ?</p>
+        <p className="section-kicker">Prêt à clarifier votre présence web ?</p>
         <h2>
-          On transforme votre idee en site professionnel, visible et agreable a
+          On transforme votre idée en site professionnel, visible et agréable à
           utiliser.
         </h2>
         <ButtonContact />

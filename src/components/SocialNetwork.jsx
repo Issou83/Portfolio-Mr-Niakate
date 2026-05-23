@@ -27,7 +27,7 @@ const SocialNetwork = () => {
             rel="noopener noreferrer"
             className="hover"
             onMouseOver={anim}
-            aria-label="Profil Github de NKT.DevWeb"
+            aria-label="Profil GitHub de NKT.DevWeb"
           >
             <img className="linkGit" src={logogit} alt="" />
           </a>

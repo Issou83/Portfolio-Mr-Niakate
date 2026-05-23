@@ -5,7 +5,7 @@ const Buttons = (props) => {
     return (
         <div className="scroll-bottom">
             {props.left && (
-            <NavLink to={props.left} className="left hover" aria-label="Page precedente">
+            <NavLink to={props.left} className="left hover" aria-label="Page précédente">
                 <span>&#10092;</span>
             </NavLink>
             )}
