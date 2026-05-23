@@ -160,11 +160,23 @@ const Home = () => {
         <p className="section-kicker">Ce que l'on construit</p>
         <h2>Une base web solide, utile et belle.</h2>
         <div className="service-grid">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <article className="service-card" key={service.title}>
               <span></span>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
+              <a
+                className="service-link"
+                href={
+                  [
+                    "/creation-site-vitrine",
+                    "/developpement-application-web",
+                    "/refonte-site-web",
+                  ][index]
+                }
+              >
+                Explorer ce service
+              </a>
             </article>
           ))}
         </div>
@@ -185,6 +197,18 @@ const Home = () => {
               </ul>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="agency-section search-intent-section">
+        <p className="section-kicker">Intentions de recherche</p>
+        <h2>Des pages concues pour les recherches qui amenent des clients.</h2>
+        <div className="intent-links">
+          <a href="/creation-site-vitrine">Creation site vitrine</a>
+          <a href="/refonte-site-web">Refonte site web</a>
+          <a href="/developpement-application-web">Application web sur mesure</a>
+          <a href="/seo-local-pau">SEO local Pau</a>
+          <a href="/creation-site-ecommerce">Creation e-commerce</a>
         </div>
       </section>
 

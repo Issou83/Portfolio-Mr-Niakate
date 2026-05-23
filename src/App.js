@@ -11,6 +11,7 @@ import Project7 from './pages/Project7';
 import Contact from './pages/contact';
 import NotFound from './pages/NotFound';
 import LocalLanding from './pages/LocalLanding';
+import ServiceLanding from './pages/ServiceLanding';
 import { AnimatePresence } from 'framer-motion';
 
 const App = () => {
@@ -29,6 +30,11 @@ const App = () => {
       <Route path='/creation-site-internet-pau' element={<LocalLanding area="pau" />} />
       <Route path='/creation-site-internet-gan' element={<LocalLanding area="gan" />} />
       <Route path='/creation-site-web-bearn' element={<LocalLanding area="bearn" />} />
+      <Route path='/creation-site-vitrine' element={<ServiceLanding service="vitrine" />} />
+      <Route path='/refonte-site-web' element={<ServiceLanding service="refonte" />} />
+      <Route path='/developpement-application-web' element={<ServiceLanding service="app" />} />
+      <Route path='/seo-local-pau' element={<ServiceLanding service="seo" />} />
+      <Route path='/creation-site-ecommerce' element={<ServiceLanding service="ecommerce" />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/*' element={<NotFound />} />
     </Routes>
