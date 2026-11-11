@@ -3,9 +3,8 @@ import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
 import Logo from "../components/Logo";
 import ContactForm from "../components/ContactForm";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import Buttons from "../components/Buttons";
-import ConsentBanner from "../components/ConsentBanner";
+import { business } from "../data/business";
+
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 
@@ -22,17 +21,16 @@ const Contact = () => {
   };
 
   return (
-    <main>
+    <main id="contenu">
       <SEO
         title="Contact NKT.DevWeb - Devis site internet à Gan et Pau"
         description="Contactez NKT.DevWeb pour un site vitrine, une refonte, une application web ou un projet SEO local à Gan, Pau et dans le Béarn."
         path="/contact"
       />
       <Mouse />
-      <ConsentBanner />
 
       <motion.div
-        initial="out"
+        initial={false}
         exit="out"
         animate="in"
         variants={pageTransition}
@@ -44,7 +42,7 @@ const Contact = () => {
         <section className="contact-layout">
           <div className="contact-intro">
             <p className="section-kicker">Démarrage projet</p>
-            <h1>Parlez-moi de votre objectif, je vous réponds avec une piste claire.</h1>
+            <h1>Parlons de votre prochain site.</h1>
             <p>
               Site vitrine, refonte, application web ou besoin de visibilité :
               envoyez les grandes lignes et nous cadrons la suite simplement.
@@ -68,7 +66,6 @@ const Contact = () => {
                   <p
                     style={{ cursor: "pointer" }}
                     className="clipboard"
-                    onClick={() => alert("Lancez l'appel pour me contacter")}
                   >
                     06 79 81 35 35
                   </p>
@@ -79,15 +76,7 @@ const Contact = () => {
           <div className="email">
             <div className="content">
               <h4>E-mail</h4>
-              <CopyToClipboard text="issou8@gmail.com" className="hover">
-                <p
-                  style={{ cursor: "pointer" }}
-                  className="clipboard"
-                  onClick={() => alert("E-mail copié !")}
-                >
-                  issou8@gmail.com
-                </p>
-              </CopyToClipboard>
+              <a href={`mailto:${business.email}`}>{business.email}</a>
             </div>
           </div>
 
@@ -95,7 +84,6 @@ const Contact = () => {
             <p>NKT.DevWeb - 2026</p>
           </div>
         </div>
-        <Buttons left={"/projet-7"} />
       </motion.div>
     </main>
   );

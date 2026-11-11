@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const projects = [
@@ -16,6 +16,12 @@ const activeClass = (nav) => (nav.isActive ? "nav-active hover" : "hover");
 const Navigation = () => {
   const [projectsOpen, setProjectsOpen] = useState(false);
   const location = useLocation();
+  const navRef = useRef(null);
+  useEffect(() => {
+    const closeOutside = (event) => { if (!navRef.current?.contains(event.target)) setProjectsOpen(false); };
+    document.addEventListener("pointerdown", closeOutside);
+    return () => document.removeEventListener("pointerdown", closeOutside);
+  }, []);
   const isProject = location.pathname.startsWith("/projet-");
 
   useEffect(() => {
@@ -24,6 +30,9 @@ const Navigation = () => {
 
   return (
     <nav
+      ref={navRef}
+      onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setProjectsOpen(false); }}
+      onKeyDown={(event) => { if (event.key === "Escape") setProjectsOpen(false); }}
       className={`navigation ${projectsOpen ? "projects-open" : ""}`}
       aria-label="Navigation principale"
     >
@@ -49,7 +58,7 @@ const Navigation = () => {
           >
             <span>Projets</span>
           </button>
-          <ul className="nav-projects" id="project-panel" aria-label="Projets">
+          <ul hidden={!projectsOpen} className="nav-projects" id="project-panel" aria-label="Projets">
             {projects.map(([label, path]) => (
               <li key={path}>
                 <NavLink to={path} className={activeClass}>

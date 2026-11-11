@@ -7,7 +7,7 @@ import Project from '../components/Project';
 
 const Project2 = () => {
     return (
-        <main>
+        <main id="contenu">
             <Mouse />
             <div className="project">
                 <Navigation />

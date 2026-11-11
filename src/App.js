@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Project1 from './pages/Project1';
 import Project2 from './pages/Project2';
@@ -12,11 +12,25 @@ import Contact from './pages/contact';
 import NotFound from './pages/NotFound';
 import LocalLanding from './pages/LocalLanding';
 import ServiceLanding from './pages/ServiceLanding';
+import SiteFooter from './components/SiteFooter';
+import ConsentBanner from './components/ConsentBanner';
 import { AnimatePresence } from 'framer-motion';
 
-const App = () => {
+const ScrollToContent = () => {
+  const { pathname, hash, key: navigationKey } = useLocation();
+  React.useEffect(() => {
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    else window.scrollTo(0, 0);
+  }, [pathname, hash, navigationKey]);
+  return null;
+};
+
+const App = ({ Router = BrowserRouter, routerProps = {} }) => {
   return (
-    <BrowserRouter>
+    <Router {...routerProps}>
+    <ScrollToContent />
+    <a className="skip-link" href="#contenu">Aller au contenu</a>
+    <ConsentBanner />
     <AnimatePresence>
     <Routes>
       <Route path='/' element={<Home />} />
@@ -39,7 +53,8 @@ const App = () => {
       <Route path='/*' element={<NotFound />} />
     </Routes>
     </AnimatePresence>
-    </BrowserRouter>
+    <SiteFooter />
+    </Router>
   );
 };
 
