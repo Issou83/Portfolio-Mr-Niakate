@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { projectsData } from "../data/projectsData";
 import { motion } from "framer-motion";
-import logogit from "../assets/fonts/img/github.png";
 import SEO, { siteUrl } from "./SEO";
 
 const Project = ({ projectNumber }) => {
@@ -54,7 +53,7 @@ const Project = ({ projectNumber }) => {
   return (
     <motion.div
       className="project-main"
-      initial="initial"
+      initial={false}
       animate="visible"
       exit="exit"
       transition={transition}
@@ -82,24 +81,22 @@ const Project = ({ projectNumber }) => {
         </ul>
       </div>
       <motion.div
-        initial="initial"
+        initial={false}
         animate="visible"
         variants={imgAnim}
         transition={{ duration: 1.2 }}
         className="img-content"
       >
         <div className="img-container hover">
-          <span>
-            <h3>{currentProject.title}</h3>
-            <p>{currentProject.infos}</p>
-            <strong>{currentProject.result}</strong>
-          </span>
+
           <img
-            src={currentProject.img}
+            src={currentProject.img.replace("./", "/")}
             alt={currentProject.title}
             className="Image du projet"
+            width="1000" height="650"
           />
         </div>
+        <div className="project-description"><h2>Le projet</h2><p>{currentProject.infos}</p><p>{currentProject.result}</p></div>
         <div className="button-container">
           <a
             href={currentProject.link}
@@ -117,7 +114,8 @@ const Project = ({ projectNumber }) => {
           >
             <img
               className="linkGit"
-              src={logogit}
+              src="/assets/img/github.png"
+              width="55" height="55"
               alt="Lien GitHub du projet"
             ></img>
             <p>Voir le code</p>

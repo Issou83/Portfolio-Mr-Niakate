@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ConsentBanner from "../components/ConsentBanner";
 import Logo from "../components/Logo";
 import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
@@ -120,18 +119,18 @@ const ServiceLanding = ({ service }) => {
   };
 
   return (
-    <main className="service-page">
+    <main id="contenu" className="service-page">
       <SEO
         title={data.title}
         description={data.description}
         path={data.path}
         jsonLd={jsonLd}
       />
-      <ConsentBanner />
       <Mouse />
       <Navigation />
       <Logo />
 
+      <nav className="breadcrumbs" aria-label="Fil d’Ariane"><NavLink to="/">Accueil</NavLink><span aria-hidden="true">/</span><span>{data.h1}</span></nav>
       <section className="service-hero">
         <p className="section-kicker">Service web</p>
         <h1>{data.h1}</h1>
@@ -175,6 +174,7 @@ const ServiceLanding = ({ service }) => {
           </p>
         </article>
       </section>
+      <section className="related-section"><h2>Un projet concret, un périmètre clair</h2><p>Basé à Gan, près de Pau, NKT.DevWeb réalise des projets avec React et Node.js. Les pages, fonctionnalités, contenus à fournir et modalités de suivi sont définis dans le devis.</p><div className="related-links"><NavLink to="/projet-1">Voir un site client →</NavLink><NavLink to="/creation-site-internet-pau">Accompagnement à Pau →</NavLink><NavLink to="/contact">Discuter de mon besoin →</NavLink></div></section>
     </main>
   );
 };
