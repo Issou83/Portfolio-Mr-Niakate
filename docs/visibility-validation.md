@@ -26,6 +26,7 @@ CI=true npm test -- --watchAll=false --runInBand
 ## Vérifications effectuées
 
 - Compilation production réussie.
+- Prévisualisation Netlify : 17 routes en HTTP 200, chacune avec son H1, sa canonique et son JSON-LD dans le HTML ; une URL inexistante renvoie HTTP 404 avec `noindex`.
 - 17 pages du sitemap + 404 : HTML présent, un H1, titres uniques, canonique, JSON-LD unique, correspondance exacte de la FAQ, fichiers image et liens internes.
 - 3 tests du formulaire : blocage des doubles envois, réponse positive simulée, erreur réseau et absence de clé traitées sans faux succès.
 - Navigateur : ouverture/fermeture du menu et touche Échap, FAQ, navigation contact avec mise à jour des métadonnées, réouverture et refus des cookies.

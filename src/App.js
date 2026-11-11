@@ -17,11 +17,11 @@ import ConsentBanner from './components/ConsentBanner';
 import { AnimatePresence } from 'framer-motion';
 
 const ScrollToContent = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key: navigationKey } = useLocation();
   React.useEffect(() => {
     if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
     else window.scrollTo(0, 0);
-  }, [pathname, hash]);
+  }, [pathname, hash, navigationKey]);
   return null;
 };
 

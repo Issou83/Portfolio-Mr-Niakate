@@ -14,12 +14,14 @@ const applyConsent = (consent) => {
   }
 };
 const ConsentBanner = () => {
-  const [consent, setConsent] = useState(null);
+  const [consent, setConsent] = useState("loading");
   useEffect(() => {
     const stored = readConsent();
     if (["granted", "denied"].includes(stored)) {
       setConsent(stored);
       applyConsent(stored);
+    } else {
+      setConsent(null);
     }
     const reopen = () => setConsent(null);
     window.addEventListener("open-consent-settings", reopen);
